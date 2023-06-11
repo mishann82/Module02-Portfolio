@@ -1,5 +1,5 @@
 {
-	"name": "module02-shop",
+	"name": "module02-Portfolio",
 	"scripts": {
 		"build": "webpack",
 		"dev": "webpack serve --env develop"

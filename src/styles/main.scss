@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,700;1,700&family=Jost:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-$green: #27300f;
-$orange: #d26a22;
-$dark-orange: #cf5c0d;
-$white: #fff;
+$black: #232326;
+$red: #D40000;
+$grey: #F3F2F0;
+$white: #FFFFFF;
 
-$font-jost: 'Jost', sans-serif;
-$font-cormorant: 'Cormorant', serif;
+$font-inter: 'Inter', sans-serif;
 
+/*
 $r_minmob:320px;
 $r_mob_360: 360px;
 $r_mob_400: 400px;
@@ -21,33 +21,47 @@ $r_desk_1280: 1280px;
 $r_desk_1350: 1350px;
 $r_desk_1500: 1500px;
 $r_desk_1750: 1750px;
+*/
 
 html {
 	font-size: 10px;
-	@media (max-width: $r_mob_500) {
+	/*@media (max-width: $r_mob_500) {
 		font-size: 8px;
-	}
+	}*/
 }
 
 body {
 	font-size: 1.6rem;
-	font-family: $font-jost;
-	color: $green;
-	background-image: url(../images/background_all.png);
+	font-family: $font-inter;
+	color: $black;
 	background-size: contain;
 	background-repeat: no-repeat;
 	overflow-x: hidden;
 }
 
 .header {
-	max-width: 1440px;
+	max-width: 1320px;
 	margin: 0 auto 5rem;
 	padding: 4rem 2rem 0;
 	display: flex;
 	justify-content: space-between;
+	text-decoration: none;
 	align-items: center;
 	gap: 5%;
-	@media (max-width: $r_desk_1280) {
+&__navigation {
+	flex-grow: 1;
+	margin-left: 4.5rem;
+}
+&__nav {
+	display: flex;
+	list-style-type: none;
+	margin: 0;
+	margin-left: 2rem;
+	padding-left: 0;
+	gap: 4.8rem;
+}
+}
+/*	@media (max-width: $r_desk_1280) {
 		gap: 3%;
 	}
 	@media (max-width: $r_mob_500) {
@@ -56,7 +70,7 @@ body {
 	&__navigation {
 		flex-grow: 1;
 		margin-left: 4.5rem;
-		@media (max-width: $r_desk_1280) {
+		/*@media (max-width: $r_desk_1280) {
 			margin-left: 0;
 		}
 		@media (max-width: $r_desk_hd) {
