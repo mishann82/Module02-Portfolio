@@ -9,35 +9,357 @@
 </head>
 
 <body>
-<div class="main">
-		<header class="header">
-			<nav class="header__navigation">
-				<ul class="header__nav">
-					<li class="header__item">
-						<a href="#" class="header__link">Обо мне </a>
-					</li>
-					<li class="header__item">
-						<a href="#" class="header__link"> Портфолио</a>
-					</li>
-					<li class="header__item">
-						<a href="#" class="header__link">Этапы работ</a>
-					</li>
-					<li class="header__item">
-						<a href="#" class="header__link">Цены</a>
-					</li>
-					<li class="header__item">
-						<a href="#" class="header__link">Обратная связь</a>
-					</li>
-				</ul>
-			</nav>
+	<header class="header">
+		<nav class="header__navigation">
+			<ul class="header__nav">
+				<li class="header__item">
+					<a href="#" class="header__link">Обо мне </a>
+				</li>
+				<li class="header__item">
+					<a href="#" class="header__link"> Портфолио</a>
+				</li>
+				<li class="header__item">
+					<a href="#" class="header__link">Этапы работ</a>
+				</li>
+				<li class="header__item">
+					<a href="#" class="header__link">Цены</a>
+				</li>
+				<li class="header__item">
+					<a href="#" class="header__link">Обратная связь</a>
+				</li>
+			</ul>
+		</nav>
+		<div class="header_contacts">
 			<a href="tel:+79101050892" class="header__tel">+7 910 105-08-92</a>
-			<div class="header__buttons">
-				<a href="tel:+79101050892" class="header__phone"></a>
-				<a href="mailto:mishann82@mail.ru" class="header__mail">mishann82@mail.ru</a>
-				<button class="header__menu"></button>
+			<a href="tel:+79101050892" class="header__phone"></a>
+			<a href="mailto:mishann82@mail.ru" class="header__mail">mishann82@mail.ru</a>
+		</div>
+	</header>
+	<section class="main">
+		<div class="container">
+			<div class="main__developer">
+				<div class="main__foto"></div>
+				<div class="main__triangle"></div>
+				<p class="main__name">Александр Антропов</p>
+				<h1 class="main__title">web-разработчик</h1>
+				<div class="main__item">
+					<button class="main__talkproject">
+						<p class="main__talkproject_text">Обсудить проект</p>
+						<img src="images/Arrow.svg" alt="" class="main__talkproject_arrow">
+					</button>
+					<div class="main__item_social">
+						<a href="#" class="main__item_social social-VK">Vk</a>
+						<a href="#" class="main__item_social social-Instagram">Instagram</a>
+						<a href="#" class=" main__item_social social-Linkedin">Linkedin</a>
+					</div>
+				</div>
+				<div class="main__skill">
+					<div class="main__skill front">
+						<h3 class="main__skill front-title">front-end</h3>
+						<p class="main__skill front-text">HTML+CSS+JS кодирование дизайнов любой сложности</p>
+					</div>
+					<div class="main__skill back">
+						<h3 class="main__skill back-title">back-end</h3>
+						<p class="main__skill back-text">Разработка сложной back-end логики для готового front-end</p>
+					</div>
+					<div class="main__skill wp">
+						<h3 class="main__skill wp-title">wordpress</h3>
+						<p class="main__skill wp-text">Разработка сайтов - от блога до интернет магазина</p>
+					</div>
+					<div class="main__skill seo">
+						<h3 class="main__skill seo-title">seo продвижение</h3>
+						<p class="main__skill seo-text">Качественное улучшение позиций сайта в поисковой выдаче</p>
+					</div>
+				</div>
 			</div>
-		</header>
-		<!--
+		</div>
+	</section>
+	<section class="about">
+		<div class="container">
+			<div class="aboutme">
+				<h2 class="aboutme_title"> обо&nbsp;мне</h2>
+				<p class="aboutme_text">
+					Создаю только эффективные решения, которые работают на результат:<br> от одностраничных сайтов, до
+					крупных интернет-порталов.
+				</p>
+			</div>
+			<div class="characteristic">
+				<div class="characteristic_empty"></div>
+				<div class="characteristic_content">
+					<div class="control">
+						<h3 class="characteristic_content_title">Контроль</h3>
+						<p class="characteristic_content_text">
+							Предоставление результатов на каждом этапе работы с возможностью внести правки
+						</p>
+					</div>
+					<div class="responsibility">
+						<h3 class="characteristic_content_title">Ответственность</h3>
+						<p class="characteristic_content_text">
+							Фриланс как основная деятельность, что означает полную отдачу в процессе работы над заказом
+						</p>
+					</div>
+					<div class="diligence">
+						<h3 class="characteristic_content_title">Исполнительность</h3>
+						<p class="characteristic_content_text">
+							Внимательность ко всем требованиям заказчика и&nbsp;прояснение любых моментов
+						</p>
+					</div>
+					<div class="quality">
+						<h3 class="characteristic_content_title">Качество</h3>
+						<p class="characteristic_content_text">
+							Высокое качество как графических материалов, так и внутренних алгоритмов работы сайта
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="step">
+		<div class="container">
+			<ul class="step__list">
+				<li class="step__item">
+					<p class="step__item-text">01&emsp;&ensp;Вы заказываете сайт</p>
+					<p class="step__item-description"> Связываетесь со мной по телефону или через заявку на сайте</p>
+				</li>
+				<li class="step__item">
+					<p class="step__item-text">02&emsp;&ensp;Обговариваем детали</p>
+					<p class="step__item-description"> Созваниваемся или списываемся любым удобным для вас способом</p>
+				</li>
+				<li class="step__item">
+					<p class="step__item-text">03&emsp;&ensp;Этап программирования</p>
+					<p class="step__item-description"> Верстаю сайт по вашему проекту пиксель в пиксель</p>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<maim class="portfolio">
+		<div class="container">
+			<h1 class="portfolio__title">Портфолио</h1>
+		</div>
+		<div class="bg">
+			<div class="container">
+				<div class="portfolio__donework">
+					<div class="portfolio__donework gym">
+						<div class="portfolio__donework_box">
+							<h3 class="portfolio__donework_title">Онлайн тренировки </h3>
+							<ul class="portfolio__donework_list">
+								<li class="gym__item">
+									&ndash; верстка по макету из Figma
+								</li>
+								<li class="gym__item">
+									&ndash; наполнение сайта контентом
+								</li>
+								<li class="gym__item">
+									&ndash; внедрена функция добавления видео
+								</li>
+							</ul>
+							<p class="portfolio__donework_time">Затрачено времени: 5 рабочих дней</p>
+						</div>
+						<div class="gym__img">
+							<a href="https://michailnab.github.io/Module01-Gym/index.html" class="gym__img"></a>
+						</div>
+					</div>
+					<div class="portfolio__donework shop">
+						<div class="portfolio__donework_box">
+							<h3 class="portfolio__donework_title">Здоровая еда Интернет магазин </h3>
+							<ul class="portfolio__donework_list">
+								<li class="shop__item">
+									&ndash; верстка по макету из PSD
+								</li>
+								<li class="shop__item">
+									&ndash; доступен функционал получения заказов
+								</li>
+								<li class="shop__item">
+									&ndash; реализована кнопка &laquo;заказать в 1 клик&raquo;
+								</li>
+							</ul>
+							<p class="portfolio__donework_time">Затрачено времени: 7 рабочих дней</p>
+						</div>
+						<div class="shop__img">
+							<a href="https://michailnab.github.io/Module02-Shop/dist/" class="shop__img"></a>
+						</div>
+					</div>
+				</div>
+				<div class="additionally">
+					<p class="additionally_text">Помимо создания сайтов и посадочных страниц я занимаюсь: настройкой
+						контекстной рекламы в системах Яндекс.Директ и Google AdWords, а так же поисковым продвижением сайтов
+					</p>
+				</div>
+				<div class="benefit">
+					<div class="benefit__grid">
+						<div class="benefit__grid_block benefit__grid-prices">
+							<h3 class="benefit__grid-title">Актуальные цены</h3>
+							<p class="benefit__grid-text">Ничего лишнего, без переплат, 100% отработка ваших денег</p>
+						</div>
+						<div class="benefit__grid_block benefit__grid-experience">
+							<h3 class="benefit__grid-title">Более 2-х лет опыта</h3>
+							<p class="benefit__grid-text">Это моя основная деятельность, создано более 150+ сайтов</p>
+						</div>
+						<div class="benefit__grid_block benefit__grid-terms">
+							<h3 class="benefit__grid-title">Оптимальные сроки</h3>
+							<p class="benefit__grid-text">Создание сайта любой сложности в&nbsp;самые сжатые сроки</p>
+						</div>
+						<div class="benefit__grid_block benefit__grid-connection">
+							<h3 class="benefit__grid-title">Всегда на связи</h3>
+							<p class="benefit__grid-text">Не теряюсь и не проматываю сроки. Подхожу ответственно</p>
+						</div>
+						<div class="benefit__grid_block benefit__grid-code">
+							<h3 class="benefit__grid-title">Чистый код</h3>
+							<p class="benefit__grid-text">HTML код без всего лишнего, плюс адаптив под все устройства</p>
+						</div>
+						<div class="benefit__grid_block benefit__grid-support">
+							<h3 class="benefit__grid-title">Поддержка сайта</h3>
+							<p class="benefit__grid-text">Быстро устраню любую проблему на вашем сайте</p>
+						</div>
+					</div>
+				</div>
+				<div class="technologies">
+					<div class="technologies__grid">
+						<div class="technologies__item">
+							<span class="technologies__item-text">
+								HTML<br><br>Стандартизированный&nbsp;язык<br>гипертекстовой разметки документов<br>для
+								просмотра веб-страниц в браузере.
+							</span>
+							<div class="technologies__img">
+								<img src="images/technologies/html5.png" alt="" class="technologies__html">
+							</div>
+						</div>
+						<div class="technologies__item">
+							<span class="technologies__item-text">
+								CSS<br><br>Язык иерархических правил, таблиц стилей, используемый для представления внешнего
+								вида документа, написанного на HTML или XML
+							</span>
+							<div class="technologies__img">
+								<img src="images/technologies/css.png" alt="" class="technologies__css">
+							</div>
+						</div>
+						<div class="technologies__item">
+							<span class="technologies__item-text">
+								JavaScript ES6+<br><br>Язык программирования высокого уровня, использующийся для придания
+								интерактивности веб-страницам
+							</span>
+							<div class="technologies__img">
+								<img src="images/technologies/JS.png" alt="" class="technologies__JS">
+							</div>
+						</div>
+						<div class="technologies__item">
+							<span class="technologies__item-text">
+								jQuery<br><br>Это простая и богатая возможностями JavaScript библиотека, где собран
+								весь набор инструментов для веб-разработки.
+							</span>
+							<div class="technologies__img">
+								<img src="images/technologies/jquery.png" alt="" class="technologies__jquery">
+							</div>
+						</div>
+						<div class="technologies__item">
+							<span class="technologies__item-text">
+								Bootstrap<br><br>Свободный набор инструментов для создания сайтов и веб-приложений. Включает в
+								себя HTML и CSS шаблоны.
+							</span>
+							<div class="technologies__img">
+								<img src="images/technologies/bootstrap.png" alt="" class="technologies__bootstrap">
+							</div>
+						</div>
+						<div class="technologies__item">
+							<span class="technologies__item-text">
+								PHP<br><br> Интерпретируемый скриптовый язык программирования общего назначения, применяемый для
+								разработки веб-приложений.
+							</span>
+							<div class="technologies__img">
+								<img src="images/technologies/php.png" alt="" class="technologies__php">
+							</div>
+						</div>
+						<div class="technologies__item">
+							<span class="technologies__item-text">
+								Vue<br><br>JavaScript-фреймворк с открытым исходным кодом для создания пользовательских
+								интерфейсов.
+							</span>
+							<div class="technologies__img">
+								<img src="images/technologies/Vue.png" alt="" class="technologies__Vue">
+							</div>
+						</div>
+						<div class="technologies__item">
+							<span class="technologies__item-text">
+								Wordpress<br><br>свободно распространяемая система управления содержимым сайта с открытым
+								исходным кодом.
+							</span>
+							<div class="technologies__img">
+								<img src="images/technologies/Wordpress.png" alt="" class="technologies__Wordpress">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</maim>
+	<section class="rates">
+		<div class="bg">
+			<div class="container">
+				<div class="rates__top">
+					<h2 class="rates__top-title">Тарифы</h2>
+					<p class="rates__top-description">Представленные ниже цены зависят не только от того какой сайт вы
+						хотите. Конечная цена будет озвучена после прочтения Вашего ТЗ</p>
+				</div>
+				<div class="rates__landing">
+					<div class="rates__leftitem">
+						<h3 class="rates__leftitem-title">Разработка<br>лэндинга или сайт визитки</h3>
+						<p class="rates__leftitem-text">Небольшой сайт состоящий из одной страницы</p>
+						<button class="rates__talkproject">
+							<p class="rates__talkproject_text">Обсудить проект</p>
+							<img src="images/Arrow.svg" alt="" class="rates__talkproject_arrow">
+						</button>
+					</div>
+					<div class="rates__rightitem">
+						<h5 class="rates__rightitem-included">Что входит</h5>
+						<ul class="rates__rightitem-list">
+							<li class="rates__rightitem-item">Сайт на CMS WordPress</li>
+							<li class="rates__rightitem-item">Одна посадочная страница</li>
+							<li class="rates__rightitem-item">От 7 дней</li>
+						</ul>
+						<p class="rates__price">От 7 000 Р</p>
+					</div>
+				</div>
+				<div class="rates__corporateweb">
+					<div class="rates__leftitem">
+						<h3 class="rates__leftitem-title">Разработка<br>корпоративного сайта</h3>
+						<p class="rates__leftitem-text">Небольшой сайт с n-количеством страниц</p>
+						<button class="rates__talkproject">
+							<p class="rates__talkproject_text">Обсудить проект</p>
+							<img src="images/Arrow.svg" alt="" class="rates__talkproject_arrow">
+						</button>
+					</div>
+					<div class="rates__rightitem">
+						<h5 class="rates__rightitem-included">Что входит</h5>
+						<ul class="rates__rightitem-list">
+							<li class="rates__rightitem-item">Сайт на CMS WordPress</li>
+							<li class="rates__rightitem-item">От 2-10 страниц </li>
+							<li class="rates__rightitem-item">От 15 дней</li>
+						</ul>
+						<p class="rates-price">От 10 000 Р</p>
+					</div>
+				</div>
+				<div class="rates__webshop">
+					<div class="rates__leftitem">
+						<h3 class="rates__leftitem-title">Разработка<br>интернет - магазина</h3>
+						<p class="rates__leftitem-text">Полноценный каталог вашей продукции</p>
+						<button class="rates__talkproject">
+							<p class="rates__talkproject_text">Обсудить проект</p>
+							<img src="images/Arrow.svg" alt="" class="rates__talkproject_arrow">
+						</button>
+					</div>
+					<div class="rates__rightitem">
+						<h5 class="rates__rightitem-included">Что входит</h5>
+						<ul class="rates__rightitem-list">
+							<li class="rates__rightitem-item">Сайт на CMS WordPress</li>
+							<li class="rates__rightitem-item">От 2-10 страниц, корзина, карточка товара</li>
+							<li class="rates__rightitem-item">От 20 дней</li>
+						</ul>
+						<p class="rates__price">От 15 000 Р</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--
 		<div class="container">
 			<div class="main__flex">
 				<div class="main__text">
@@ -637,8 +959,8 @@
 		function closePopupMainBottom() {
 			document.getElementById("popupMainBottom").style.opacity = "0";
 		}
-	</script>-->
-</div>
+	</script>
+-->
 </body>
 
 </html>

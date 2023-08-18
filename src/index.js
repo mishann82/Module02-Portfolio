@@ -1,14 +1,10 @@
-import 'normalize.css'
+import 'normalize.css';
 import './styles/main.scss';
-
-
 /*
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-*/
 
-/*
 import Swiper, { Navigation, Pagination } from 'swiper';
 
 var swiper = new Swiper(".offerSwiper", {
