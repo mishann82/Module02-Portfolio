@@ -588,8 +588,8 @@ body {
 			line-height: 150%;
 			padding: 25px 0;
 			top: 13rem;
-			left: 50%;
-			margin-left: -120px;
+			left: 52%;
+			margin-left: -12rem;
 			position: absolute;
 			transition: .5s;
 			z-index: 1;
@@ -611,46 +611,46 @@ body {
 			filter: grayscale(0);
 		}
 	}
-		&__html {
-			width: 7.7rem;
-			height: 8.4rem;
-			padding-top: 3.2rem;
+	&__html {
+		width: 7.7rem;
+		height: 8.4rem;
+		padding-top: 3.2rem;
+	}
+	&__css {
+		width: 7.7rem;
+		height: 8.4rem;
+		padding-top: 3.3rem;
+	}
+	&__JS {
+		width: 7.7rem;
+		height: 8.4rem;
+		padding-top: 3.6rem;
+	}
+	&__jquery {
+		width: 7.7rem;
+		height: 8.4rem;
+		padding-top: 3.3rem;
 		}
-		&__css {
-			width: 7.7rem;
-			height: 8.4rem;
-			padding-top: 3.3rem;
-		}
-			&__JS {
-				width: 7.7rem;
-				height: 8.4rem;
-				padding-top: 3.6rem;
-			}
-			&__jquery {
-				width: 7.7rem;
-				height: 8.4rem;
-				padding-top: 3.3rem;
-			}
-			&__bootstrap {
-				width: 7.7rem;
-				height: 8.4rem;
-				padding-top: 3.8rem;
-			}
-			&__php {
-				width: 10.5rem;
-				height: 5.5rem;
-				padding-top: 4.6rem;
-			}
-			&__Vue {
-				width: 8.1rem;
-				height: 7rem;
-				padding-top: 3.8rem;
-			}
-			&__Wordpress {
-				width: 7.7rem;
-				height: 8.4rem;
-				padding-top: 3.6rem;
-			}
+	&__bootstrap {
+		width: 7.7rem;
+		height: 8.4rem;
+		padding-top: 3.8rem;
+	}
+	&__php {
+		width: 10.5rem;
+		height: 5.5rem;
+		padding-top: 4.6rem;
+	}
+	&__Vue {
+		width: 8.1rem;
+		height: 7rem;
+		padding-top: 3.8rem;
+	}
+	&__Wordpress {
+		width: 7.7rem;
+		height: 8.4rem;
+		padding-top: 3.6rem;
+	}
 }
 .rates {
 	margin-top: 15.1rem;
@@ -787,6 +787,7 @@ body {
 		line-height: 150%
 	}
 }
+
 	/*
 	&__tel {
 		color: $green;
