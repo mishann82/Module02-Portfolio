@@ -38,23 +38,26 @@ body {
 	background-repeat: no-repeat;
 	overflow-x: hidden;
 }
-
 .header {
+	position: fixed;
+	background-color: $black;
+	width: 100%;
+	height: 8rem;
+	top: 0;
+	z-index: 10;
+}
+.header, .footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	column-gap: 34.8rem;
+	column-gap: 32rem;
 	color: $grey;
 	font-size: 14px;
 	text-decoration: none;
-	position: fixed;
-	background-color: $black;
-	height: 8rem;
-	width: 100%;
-	top: 0;
-	z-index: 10;
+	
 &__navigation {
 	text-decoration: none;
+	margin-left: -4rem;
 }
 &__nav {
 	display: flex;
@@ -126,7 +129,6 @@ body {
 		text-decoration: none;
 		font-size: 14px;
 		margin: 0 0 0 26px;
-		//text-align: right;
 		transition: 0.5s;
 		&:hover {
 			color: $red;
@@ -602,13 +604,13 @@ body {
 		min-height: 14.8rem;
 		text-align: center;
 		background-repeat: no-repeat;
-		border: 1px solid rgba(243, 242, 240, 0.8);
+		border: 1px solid rgba(243, 242, 240, 0.5);
 		filter: grayscale(1);
 		cursor: pointer;
 		transition: .5s;
 		&:hover {
 			filter: grayscale(0);
-			border: 1px solid $grey;
+			border: 1px solid rgba(243, 242, 240, 1);
 		}
 	}
 	&__html {
@@ -849,7 +851,7 @@ body {
 			text-decoration: none;
 			gap: 5.6rem;
 			position: relative;
-			margin-top: 15.8rem;
+			margin-top: 15.5rem;
 			
 		}
 	}
@@ -954,7 +956,7 @@ body {
 			border-radius: 0;
 			width: 54rem;
 			height: 6.5rem;
-			margin-top: 5rem;
+			margin-top: 4.2rem;
 			color: $grey;
 			font-size: 16px;
 			font-weight: 700;
@@ -1005,6 +1007,33 @@ body {
 	z-index:9;
 	transform: translate(100%,0);
 	pointer-events: none;
+}
+.footermain {
+	display: block;
+	margin-top: 5rem;
+	padding-bottom: 4.2rem;
+}
+.footer {
+	
+	&__text {
+		display: flex;
+		justify-content: space-between;
+		color: rgba(243, 242, 240, 0.5);
+		font-size: 1.2rem;
+		font-weight: 400;
+		line-height: 150%;
+		margin-top: 2rem;
+		
+	}
+	&__author {
+		color: rgba(243, 242, 240, 0.5);
+		font-size: 1.2rem;
+		font-weight: 400;
+		line-height: 150%;
+		&:hover {
+			color: rgba(243, 242, 240, 1);
+		}
+	}
 }
 /*
 	&__tel {
