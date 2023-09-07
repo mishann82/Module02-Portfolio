@@ -265,6 +265,7 @@ body {
 }
 .social{
 	&-VK {
+		transition: 0.5s;
 		&::before {
 			content: '';
 			background-color: $grey;
@@ -281,6 +282,7 @@ body {
 		}
 	}
 	&-Instagram {
+		transition: 0.5s;
 		&::before {
 			content: '';
 			background-color: $grey;
@@ -297,6 +299,7 @@ body {
 		}
 	}
 	&-Linkedin {
+		transition: 0.5s;
 		&:hover {
 			color: $red;
 		}
@@ -731,6 +734,17 @@ body {
 		margin-left: -0.7rem;
 		border: none;
 		cursor: pointer;
+		&::before {
+			content: '';
+			background-color: $grey;
+			width: 170px;
+			height: 2px;
+			position: absolute;
+			top: 3.5rem;
+			opacity: 0;
+			transition: 0.5s;
+		}
+
 		&_text {
 			color: $grey;
 			font-weight: 700;
@@ -940,7 +954,7 @@ body {
 			font-size: 12px;
 			font-weight: 400;
 			line-height: 250%; 
-			transition: all .3s ease;
+			transition: all .5s ease;
 				}
 			&:last-child {
 				a{
@@ -962,6 +976,7 @@ body {
 			font-weight: 700;
 			line-height: 150%;
 			transition: 5s;
+			z-index: 1;
 			&:hover {
 				cursor: pointer;
 				background-color: #EA0E00;
@@ -1030,9 +1045,65 @@ body {
 		font-size: 1.2rem;
 		font-weight: 400;
 		line-height: 150%;
+		transition: 0.5s;
 		&:hover {
 			color: rgba(243, 242, 240, 1);
 		}
+	}
+}
+
+//popup
+
+.popup {
+	position: fixed;
+	background-color: $black;
+	background-repeat: no-repeat;
+	background-position: center;
+	align-items: center;
+	max-width: 600px;
+	height: 572px;
+	padding-bottom: 2rem;
+	top: 15rem;
+	left: 50rem;
+	transition: all .3s ease;
+	visibility: hidden;
+	z-index: 2;
+	&_title {
+		color: $grey;
+		text-align: center;
+		font-size: 2.2rem;
+		font-weight: 700;
+		line-height: 150%;
+		letter-spacing: 0.66px;
+		text-transform: uppercase;
+		padding-top: 5rem;
+	}
+	&_text {
+		color: $grey;
+		text-align: center;
+		font-weight: 400;
+		line-height: 150%;
+		padding-bottom: 3rem;
+		margin: 0 2rem;
+		width: 54rem;
+		border-bottom: 1px solid $grey;
+	}
+	&_form {
+		margin-left: 2rem;
+	}
+	&_close {
+		width: 2rem;
+		height: 2rem;
+		background-image: url(../images/close.svg);
+		position: absolute;
+		background-color: transparent;
+		background-size: contain;
+		background-repeat: no-repeat;
+		border: none;
+		top: 2rem;
+		right: 2rem;
+		cursor: pointer;
+		z-index: 2;
 	}
 }
 /*

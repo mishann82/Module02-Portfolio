@@ -43,7 +43,7 @@
 				<p class="main__name">Александр Антропов</p>
 				<h1 class="main__title">web-разработчик</h1>
 				<div class="main__item">
-					<button class="main__talkproject">
+					<button class="main__talkproject" type="button" onclick="openPopup()">
 						<p class="main__talkproject_text">Обсудить проект</p>
 						<img src="images/Arrow.svg" alt="" class="main__talkproject_arrow">
 					</button>
@@ -300,7 +300,7 @@
 					<div class="rates__leftitem">
 						<h3 class="rates__leftitem-title">Разработка<br>лэндинга или сайт визитки</h3>
 						<p class="rates__leftitem-text">Небольшой сайт состоящий из одной страницы</p>
-						<button class="rates__talkproject">
+						<button class="rates__talkproject" type="button" onclick="openPopup()">
 							<p class="rates__talkproject_text">Обсудить проект</p>
 							<img src="images/Arrow.svg" alt="" class="rates__talkproject_arrow">
 						</button>
@@ -319,7 +319,7 @@
 					<div class="rates__leftitem">
 						<h3 class="rates__leftitem-title">Разработка<br>корпоративного сайта</h3>
 						<p class="rates__leftitem-text">Небольшой сайт с n-количеством страниц</p>
-						<button class="rates__talkproject">
+						<button class="rates__talkproject" type="button" onclick="openPopup()">
 							<p class="rates__talkproject_text">Обсудить проект</p>
 							<img src="images/Arrow.svg" alt="" class="rates__talkproject_arrow">
 						</button>
@@ -338,7 +338,7 @@
 					<div class="rates__leftitem">
 						<h3 class="rates__leftitem-title">Разработка<br>интернет - магазина</h3>
 						<p class="rates__leftitem-text">Полноценный каталог вашей продукции</p>
-						<button class="rates__talkproject">
+						<button class="rates__talkproject" type="button" onclick="openPopup ()">
 							<p class="rates__talkproject_text">Обсудить проект</p>
 							<img src="images/Arrow.svg" alt="" class="rates__talkproject_arrow">
 						</button>
@@ -437,7 +437,46 @@
 			</div>
 		</footer>
 	</div>
+	<div class="popup" id="popupForm">
+		<h3 class="popup_title">Расскажите о своем проекте</h3>
+		<p class="popup_text">Заполните все поля, и я свяжусь с вами<br>в ближайшее время </p>
+		<div class="popup_form">
+			<form action="#">
+				<label class="form_phone">Телефон или почта</label>
+				<input class="form_input" type="text" placeholder="Введите телефон">
+				<label class="form__messenger">Выберите удобный способ связи<br>
+					<input type="checkbox" id="form__messenger-example">
+					<span class="cont">Telegram</span>
+					<ul class="form__messenger_list">
+						<li class="form__messenger_item">
+							<a target="_blank" href="#">WhatsApp</a>
+						</li>
+						<li class="form__messenger_item">
+							<a target="_blank" href="#">Viber</a>
+						</li>
+						<li class="form__messenger_item">
+							<a target="_blank" href="#">Звонок на телефон</a>
+						</li>
+						<li class="form__messenger_item">
+							<a target="_blank" href="#">SMS сообщение</a>
+						</li>
+					</ul>
+					<label for="form__messenger-example" class="overlay-close"></label>
+					<button type="submit" class="form__messenger-send">Отправить</button>
+				</label>
+			</form>
+		<button class="popup_close" onclick="closePopup()"></button>
+	</div>
 
+	<script>
+		function openPopup() {
+	document.getElementById("popupForm").style.visibility = "visible";
+}
+
+function closePopup() {
+	document.getElementById("popupForm").style.visibility = "hidden";
+}
+	</script>
 	<!--
 		<form>
 			<label class="card__label">Ваше имя</label>
