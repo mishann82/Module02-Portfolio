@@ -321,13 +321,15 @@ body {
 		opacity: 0.8;
 	}
 }
-
+.about {
+	padding-top: 13.3rem;
+	transition: 0.5s;
+}
 .aboutme {
 	display: flex;
 	justify-content: space-between;
 	list-style-type: none;
-	gap: 44rem;
-	margin-top: 13.1rem;
+	gap: 44rem;	
 	margin-right: -1.5rem;
 	padding-bottom: 3rem;
 	border-bottom: 1px solid $grey;
@@ -376,7 +378,7 @@ body {
 	}
 }
 .step {
-	margin-top: 16rem;
+	padding-top: 16rem;
 		&__item {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -424,7 +426,7 @@ body {
 		text-transform: uppercase;
 		font-size: 74px;
 		font-weight: 700;
-		margin-top: 18.3rem;
+		padding-top: 18.3rem;
 		margin-bottom: 14rem;
 		position: relative;
 		z-index: 2;
@@ -658,7 +660,7 @@ body {
 	}
 }
 .rates {
-	margin-top: 15.1rem;
+	padding-top: 15.1rem;
 	&__top {
 		display: flex;
 		column-gap: 45rem;
@@ -805,7 +807,7 @@ body {
 }
 
 .feedback {
-	margin-top: 11rem;
+	padding-top: 11rem;
 	position: relative;
 	&::before {
 		content: '';

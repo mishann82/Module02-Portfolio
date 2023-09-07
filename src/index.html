@@ -13,19 +13,19 @@
 		<nav class="header__navigation">
 			<ul class="header__nav">
 				<li class="header__item">
-					<a href="#" class="header__link">Обо мне </a>
+					<a href="#about" class="header__link">Обо мне </a>
 				</li>
 				<li class="header__item">
-					<a href="#" class="header__link"> Портфолио</a>
+					<a href="#portfolio__title" class="header__link"> Портфолио</a>
 				</li>
 				<li class="header__item">
-					<a href="#" class="header__link">Этапы работ</a>
+					<a href="#step" class="header__link">Этапы работ</a>
 				</li>
 				<li class="header__item">
-					<a href="#" class="header__link">Цены</a>
+					<a href="#rates" class="header__link">Цены</a>
 				</li>
 				<li class="header__item">
-					<a href="#" class="header__link">Обратная связь</a>
+					<a href="#feedback" class="header__link">Обратная связь</a>
 				</li>
 			</ul>
 		</nav>
@@ -74,7 +74,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="about">
+	<section class="about" id="about">
 		<div class="container">
 			<div class="aboutme">
 				<h2 class="aboutme_title"> обо&nbsp;мне</h2>
@@ -114,7 +114,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="step">
+	<section class="step" id="step">
 		<div class="container">
 			<ul class="step__list">
 				<li class="step__item">
@@ -130,7 +130,7 @@
 					<p class="step__item-description"> Верстаю сайт по вашему проекту пиксель в пиксель</p>
 				</li>
 			</ul>
-			<h1 class="portfolio__title">Портфолио</h1>
+			<h1 class="portfolio__title" id="portfolio__title">Портфолио</h1>
 		</div>
 	</section>
 	<div class="bg">
@@ -289,7 +289,7 @@
 				</div>
 			</div>
 		</maim>
-		<section class="rates">
+		<section class="rates" id="rates">
 			<div class="container">
 				<div class="rates__top">
 					<h2 class="rates__top-title">Тарифы</h2>
@@ -355,7 +355,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="feedback">
+		<section class="feedback" id="feedback">
 			<div class="container">
 				<div class="feedback__top">
 					<div class="feedback__triangle"></div>
@@ -408,19 +408,19 @@
 					<div class="footer__navigation">
 						<ul class="footer__nav">
 							<li class="footer__item">
-								<a href="#" class="footer__link">Обо мне </a>
+								<a href="#about" class="footer__link">Обо мне </a>
 							</li>
 							<li class="footer__item">
-								<a href="#" class="footer__link"> Портфолио</a>
+								<a href="#portfolio__title" class="footer__link"> Портфолио</a>
 							</li>
 							<li class="footer__item">
-								<a href="#" class="footer__link">Этапы работ</a>
+								<a href="#step" class="footer__link">Этапы работ</a>
 							</li>
 							<li class="footer__item">
-								<a href="#" class="footer__link">Цены</a>
+								<a href="#rates" class="footer__link">Цены</a>
 							</li>
 							<li class="footer__item">
-								<a href="#" class="footer__link">Обратная связь</a>
+								<a href="#feedback" class="footer__link">Обратная связь</a>
 							</li>
 						</ul>
 					</div>
@@ -465,19 +465,37 @@
 					<button type="submit" class="form__messenger-send">Отправить</button>
 				</label>
 			</form>
-		<button class="popup_close" onclick="closePopup()"></button>
-	</div>
+			<button class="popup_close" onclick="closePopup()"></button>
+		</div>
 
-	<script>
-		function openPopup() {
-	document.getElementById("popupForm").style.visibility = "visible";
-}
+		<script>
+			function openPopup() {
+				document.getElementById("popupForm").style.visibility = "visible";
+			}
 
-function closePopup() {
-	document.getElementById("popupForm").style.visibility = "hidden";
-}
-	</script>
-	<!--
+			function closePopup() {
+				document.getElementById("popupForm").style.visibility = "hidden";
+			}
+
+			// Smooth Scroll
+
+			const links = document.querySelectorAll(".header__link");
+
+			for (const link of links) {
+				link.addEventListener("click", clickHandler);
+			}
+
+			function clickHandler(e) {
+				e.preventDefault();
+				const href = this.getAttribute("href");
+
+				document.querySelector(href).scrollIntoView({
+					behavior: "smooth"
+				});
+			}
+		</script>
+
+		<!--
 		<form>
 			<label class="card__label">Ваше имя</label>
 			<input class="card__input" type="text" placeholder="Ваше имя">

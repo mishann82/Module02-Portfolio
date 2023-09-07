@@ -1,7 +1,6 @@
 import 'normalize.css';
 import './styles/main.scss';
 
-
 /*
 import 'swiper/css';
 import 'swiper/css/navigation';
