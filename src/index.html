@@ -47,11 +47,11 @@
 						<p class="main__talkproject_text">Обсудить проект</p>
 						<img src="images/Arrow.svg" alt="" class="main__talkproject_arrow">
 					</button>
-					<div class="main__item_social">
-						<a href="#" class="main__item_social social-VK">Vk</a>
-						<a href="#" class="main__item_social social-Instagram">Instagram</a>
-						<a href="#" class=" main__item_social social-Linkedin">Linkedin</a>
-					</div>
+					<ul class="main__item_social">
+						<li><a href="#" class="main__item_social social-VK">Vk</a></li>
+						<li><a href="#" class="main__item_social social social-Instagram">Instagram</a></li>
+						<li><a href="#" class=" main__item_social social social-Linkedin">Linkedin</a></li>
+					</ul>
 				</div>
 				<div class="main__skill">
 					<div class="main__skill front">
@@ -368,11 +368,11 @@
 					</p>
 				</div>
 				<div class="feedback__connection">
-					<div class="feedback__connection_social">
-						<a href="#" class="feedback__connection_social social-VK">Vk</a>
-						<a href="#" class="feedback__connection_social social-Instagram">Instagram</a>
-						<a href="#" class=" feedback__connection_social social-Linkedin">Linkedin</a>
-					</div>
+					<ul class="feedback__connection_social">
+						<li><a href="#" class="feedback__connection_social social-VK">Vk</a></li>
+						<li><a href="#" class="feedback__connection_social social social-Instagram">Instagram</a></li>
+						<li><a href="#" class=" feedback__connection_social social social-Linkedin">Linkedin</a></li>
+					</ul>
 					<div class="form">
 						<form action="#">
 							<label class="form_phone">Телефон или почта</label>
@@ -479,7 +479,7 @@
 
 			// Smooth Scroll
 
-			const links = document.querySelectorAll(".header__link");
+			const links = document.querySelectorAll(".header__link, .footer__link");
 
 			for (const link of links) {
 				link.addEventListener("click", clickHandler);
