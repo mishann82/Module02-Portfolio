@@ -109,7 +109,7 @@ body {
 			left: 13.5rem;
 			opacity: 0.5;
 			@media (max-width: $r_tab_900) {
-				left: 11.8rem;
+				left: 11.7rem;
 			}
 			@media (max-width: $r_mob_700) {
 				left: 13.5rem;
@@ -170,8 +170,17 @@ body {
 			position: absolute;
 			left: 13.4rem;
 			opacity: 0.5;
+			@media (max-width: $r_tab_900) {
+				left: 11.7rem;
+			}
+			@media (max-width: $r_mob_700) {
+				left: 13.5rem;
+			}
 			@media (max-width: $r_mob_500) {
 				display: none;
+			}
+			@media (max-width: $r_mob_400) {
+				left: 11.7rem;
 			}
 		}
 	}
@@ -603,6 +612,9 @@ body {
 }
 .step {
 	padding-top: 15rem;
+	@media (max-width: $r_tab) {
+		margin: 0;
+}
 	&__item {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -886,7 +898,7 @@ body {
 		@media (max-width: $r_tab_900) {
 			grid-template-columns: repeat(2, 1fr);
 	}
-	@media (max-width: $r_mob_500) {
+		@media (max-width: $r_mob_500) {
 		grid-template-columns: repeat(1, 1fr);
 	}
 		&_block {
@@ -955,6 +967,9 @@ body {
 }
 .technologies {
 	margin-top: 16rem;
+	@media (max-width: $r_tab) {
+		margin-top: 8rem;
+}
 	&__grid {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
@@ -1794,8 +1809,8 @@ body {
 	background-repeat: no-repeat;
 	background-position: center;
 	align-items: center;
-	max-width: 600px;
-	height: 572px;
+	max-width: 60rem;
+	height: 62rem;
 	padding-bottom: 2rem;
 	margin: 0 auto;
 	left: 0;
@@ -1805,6 +1820,12 @@ body {
 	transition: all .5s ease;
 	visibility: hidden;
 	z-index: 2;
+	@media (max-width: $r_mob_700) {
+		max-width: 85%;
+	}
+	@media (max-width: $r_mob_500) {
+		max-width: 90%;
+	}
 	&_title {
 		color: $grey;
 		text-align: center;
@@ -1821,12 +1842,27 @@ body {
 		font-weight: 400;
 		line-height: 150%;
 		padding-bottom: 3rem;
-		margin: 0 2rem;
-		width: 54rem;
+		margin: 1rem 14rem;
+		@media (max-width: $r_mob_700) {
+			margin: 1rem 7rem;
+		}
+		@media (max-width: $r_mob_500) {
+			margin: 1rem 4rem;
+		}
+		@media (max-width: $r_mob_400) {
+			margin: 1rem 2rem;
+		}
+		@media (max-width: $r_mob_360) {
+			margin: 1rem 0;
+		}
+	}
+	&_border {
 		border-bottom: 1px solid $grey;
+		margin: 0 2rem;
+		max-width: 97%;
 	}
 	&_form {
-		margin-left: 2rem;
+		margin:4rem 2rem;
 	}
 	&_close {
 		width: 2rem;
