@@ -77,7 +77,7 @@
 				<h1 class="main__title">web-разработчик</h1>
 				<div class="main__item">
 					<button class="main__talkproject" type="button" onclick="openPopup()">
-						<p class="main__talkproject_text">Обсудить проект</p>
+						<span class="main__talkproject_text">Обсудить проект</span>
 						<img src="images/Arrow.svg" alt="" class="main__talkproject_arrow">
 					</button>
 					<ul class="main__item_social">
@@ -170,7 +170,7 @@
 		</div>
 	</section>
 	<div class="bg">
-		<maim class="portfolio">
+		<main class="portfolio">
 			<div class="container">
 				<div class="portfolio__donework gym">
 					<div class="portfolio__donework_box">
@@ -322,7 +322,7 @@
 					</div>
 				</div>
 			</div>
-		</maim>
+		</main>
 		<section class="rates" id="rates">
 			<div class="container">
 				<div class="rates__top">
@@ -335,7 +335,7 @@
 						<h3 class="rates__leftitem-title">Разработка<br>лэндинга или сайт визитки</h3>
 						<p class="rates__leftitem-text">Небольшой сайт состоящий из одной страницы</p>
 						<button class="rates__talkproject" type="button" onclick="openPopup()">
-							<p class="rates__talkproject_text">Обсудить проект</p>
+							<span class="rates__talkproject_text">Обсудить проект</span>
 							<img src="images/Arrow.svg" alt="" class="rates__talkproject_arrow">
 						</button>
 					</div>
@@ -354,7 +354,7 @@
 						<h3 class="rates__leftitem-title">Разработка<br>корпоративного сайта</h3>
 						<p class="rates__leftitem-text">Небольшой сайт с n-количеством страниц</p>
 						<button class="rates__talkproject" type="button" onclick="openPopup()">
-							<p class="rates__talkproject_text">Обсудить проект</p>
+							<span class="rates__talkproject_text">Обсудить проект</span>
 							<img src="images/Arrow.svg" alt="" class="rates__talkproject_arrow">
 						</button>
 					</div>
@@ -373,7 +373,7 @@
 						<h3 class="rates__leftitem-title">Разработка<br>интернет - магазина</h3>
 						<p class="rates__leftitem-text">Полноценный каталог вашей продукции</p>
 						<button class="rates__talkproject" type="button" onclick="openPopup ()">
-							<p class="rates__talkproject_text">Обсудить проект</p>
+							<span class="rates__talkproject_text">Обсудить проект</span>
 							<img src="images/Arrow.svg" alt="" class="rates__talkproject_arrow">
 						</button>
 					</div>
@@ -411,7 +411,7 @@
 						<form action="#" class="form">
 							<label class="form_phone">Телефон или почта</label>
 							<input class="form_input" type="text" placeholder="Введите телефон">
-							<label class="form__messenger">Выберите удобный способ связи<br>
+							<label class="form__messenger">Выберите удобный способ связи
 								<input type="checkbox" id="form__messenger-example">
 								<span class="cont">Telegram</span>
 								<ul class="form__messenger_list">
@@ -428,9 +428,9 @@
 										<a target="_blank" href="#">SMS сообщение</a>
 									</li>
 								</ul>
-								<label for="form__messenger-example" class="overlay-close"></label>
-								<button type="submit" class="form__messenger-send">Отправить</button>
 							</label>
+							<label for="form__messenger-example" class="overlay-close"></label>
+							<button type="submit" class="form__messenger-send">Отправить</button>
 						</form>
 					</div>
 				</div>
@@ -479,8 +479,8 @@
 			<form action="#">
 				<label class="form_phone">Телефон или почта</label>
 				<input class="form_input" type="text" placeholder="Введите телефон">
-				<label class="form__messenger">Выберите удобный способ связи<br>
-					<input type="checkbox" id="form__messenger-example">
+				<label class="form__messenger">Выберите удобный способ связи
+					<input type="checkbox" id="form__messenger-example1">
 					<span class="cont">Telegram</span>
 					<ul class="form__messenger_list">
 						<li class="form__messenger_item">
@@ -496,48 +496,48 @@
 							<a target="_blank" href="#">SMS сообщение</a>
 						</li>
 					</ul>
-					<label for="form__messenger-example" class="overlay-close"></label>
-					<button type="submit" class="form__messenger-send">Отправить</button>
 				</label>
+				<label for="form__messenger-example1" class="overlay-close"></label>
+				<button type="submit" class="form__messenger-send">Отправить</button>
 			</form>
 			<button class="popup_close" onclick="closePopup()"></button>
 		</div>
-		<script>
-			function openPopup() {
-				document.getElementById("popupForm").style.visibility = "visible";
-			}
+	</div>
+	<script>
+		function openPopup() {
+			document.getElementById("popupForm").style.visibility = "visible";
+		}
 
-			function closePopup() {
-				document.getElementById("popupForm").style.visibility = "hidden";
-			}
+		function closePopup() {
+			document.getElementById("popupForm").style.visibility = "hidden";
+		}
 
-			// Smooth Scroll
+		// Smooth Scroll
 
-			const links = document.querySelectorAll(".header__link, .footer__link");
+		const links = document.querySelectorAll(".header__link, .footer__link");
 
-			for (const link of links) {
-				link.addEventListener("click", clickHandler);
-			}
+		for (const link of links) {
+			link.addEventListener("click", clickHandler);
+		}
 
-			function clickHandler(e) {
-				e.preventDefault();
-				const href = this.getAttribute("href");
+		function clickHandler(e) {
+			e.preventDefault();
+			const href = this.getAttribute("href");
 
-				document.querySelector(href).scrollIntoView({
-					behavior: "smooth"
-				});
-			}
-			// Menu
+			document.querySelector(href).scrollIntoView({
+				behavior: "smooth"
+			});
+		}
+		// Menu
 
-			function openModal() {
-				document.getElementById("modal").style.top = "70px";
-			}
+		function openModal() {
+			document.getElementById("modal").style.top = "70px";
+		}
 
-			function closeModal() {
-				document.getElementById("modal").style.top = "-600px";
-			}
-		</script>
-
+		function closeModal() {
+			document.getElementById("modal").style.top = "-770px";
+		}
+	</script>
 </body>
 
 </html>
