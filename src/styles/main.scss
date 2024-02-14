@@ -1203,8 +1203,8 @@ body {
 			top: -2.7rem;
 			left: -7rem;
 			z-index: -1;
-			@media (max-width: $r_mob_400) {
-				top: -7rem;
+			@media (max-width: $r_mob_500) {
+				top: -4rem;
 				left: -9rem;
 			}
 		}
@@ -1868,11 +1868,10 @@ body {
 	max-width: 60rem;
 	height: 98%;
 	padding-bottom: 2rem;
-	margin: 0 auto;
+	margin: 3rem auto;
 	left: 0;
 	right: 0;
 	box-sizing: border-box;
-	top: 7rem;
 	transition: all .5s ease;
 	visibility: hidden;
 	z-index: 2;
@@ -1888,7 +1887,7 @@ body {
 		font-size: 2.2rem;
 		font-weight: 700;
 		line-height: 150%;
-		letter-spacing: 0.66px;
+		letter-spacing: 0.066rem;
 		text-transform: uppercase;
 		padding-top: 5rem;
 	}
