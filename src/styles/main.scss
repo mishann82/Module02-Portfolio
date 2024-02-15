@@ -1877,11 +1877,9 @@ body {
 	visibility: hidden;
 	z-index: 2;
 	@media (max-width: $r_mob_700) {
-		max-width: 85%;
-	}
-	@media (max-width: $r_mob_500) {
-		position: absolute;
-		min-width: 99%;
+		background-size: contain;
+		width: 100%;
+		margin: 3rem 0;
 	}
 	&_title {
 		color: $grey;
@@ -1892,6 +1890,9 @@ body {
 		letter-spacing: 0.066rem;
 		text-transform: uppercase;
 		padding-top: 5rem;
+		@media (max-width: $r_mob_500) {
+			font-size: 1.6rem;
+		}
 	}
 	&_text {
 		color: $grey;
@@ -1905,6 +1906,7 @@ body {
 		}
 		@media (max-width: $r_mob_500) {
 			margin: 1rem 4rem;
+			font-size: 1.4rem;
 		}
 		@media (max-width: $r_mob_400) {
 			margin: 1rem 2rem;
@@ -1919,6 +1921,7 @@ body {
 		max-width: 97%;
 	}
 	&_form {
+		max-width: 97%;
 		margin:4rem 2rem;
 	}
 	&_close {
