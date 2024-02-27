@@ -46,8 +46,8 @@ body {
 	height: 8rem;
 	top: 0;
 	left: 0;
-	margin: 0 auto;
-	padding: 0 auto;
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 	z-index: 10;
 	@media (max-width: $r_mob_700) {
@@ -634,18 +634,20 @@ body {
 	@media (max-width: $r_mob_500) {
 		padding-top: 3rem;
 	}
+	&__list {
+		padding: 0;
+	}
 	&__item {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		justify-content: space-between;
 		list-style-type: none;
 		align-items: center;
-		padding: 0.4rem 0;
+		padding: 0;
 		border-top: 1px solid $grey;
 		&:last-child{
 			border-bottom: 1px solid $grey;
 		}
-		margin-left: -4rem;
 		 &-textdesk {
 			color: $grey;
 			font-size: 2.8rem;
@@ -792,7 +794,7 @@ body {
 		padding-bottom: 4rem;
 	}
 	&_box {
-		width: 50rem;
+		max-width: 50rem;
 		z-index: 2;
 	}
 	&_title {
@@ -803,9 +805,6 @@ body {
 		@media (max-width: $r_tab_900) {
 			font-size: 2.4rem;
 			padding-bottom: 1rem;
-		}
-		@media (max-width: $r_mob_700) {
-			font-size: 2.7rem;
 		}
 		@media (max-width: $r_mob_500) {
 			font-size: 2.1rem;
@@ -824,11 +823,8 @@ body {
 		margin-bottom: 3.5rem;
 		opacity: 0.8;
 		@media (max-width: $r_tab_900) {
-			font-size: 1.4rem;
-			margin-bottom: 2.3rem;
-		}
-		@media (max-width: $r_mob_700) {
 			font-size: 1.6rem;
+			margin-bottom: 2.3rem;
 		}
 		@media (max-width: $r_mob_400) {
 			font-size: 1.2rem;
@@ -1805,7 +1801,7 @@ body {
 	@media (max-width: $r_tab) {
 		flex-direction: column-reverse;
 		text-align: center;
-		row-gap: 3rem;
+		//row-gap: 3rem;
 	}
 	&__nav {
 		@media (max-width: $r_tab) {
@@ -1816,16 +1812,12 @@ body {
 			font-size: 1.2rem;
 		}
 		@media (max-width: $r_mob_500) {
-			padding-left: 1.2rem;
-			row-gap: 1rem;
 			font-size: 1.1rem;
 		}
 		@media (max-width: $r_mob_400) {
-			row-gap: 0.8rem;
 			font-size: 1rem;
 		}
 		@media (max-width: $r_mob_360) {
-			row-gap: 0.4rem;
 			font-size: 0.85rem;
 	}
 	}
@@ -1876,7 +1868,7 @@ body {
 	align-items: center;
 	max-width: 60rem;
 	height: 100%;
-	padding: 0 auto 2rem;
+	padding-bottom: 2rem;
 	margin: 3rem auto;
 	left: 0;
 	right: 0;
