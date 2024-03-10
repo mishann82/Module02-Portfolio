@@ -414,9 +414,10 @@
 						<form action="#" class="form">
 							<label class="form_phone">Телефон или почта</label>
 							<input class="form_input" type="tel" placeholder="Введите телефон">
-							<label class="form__messenger">Выберите удобный способ связи
-								<input type="checkbox" id="form__messenger-example">
+							<div class="form__text">Выберите удобный способ связи</div>
+							<label class="form__messenger">
 								<span class="cont">Telegram</span>
+								<input type="checkbox" id="form__messenger-example">
 								<ul class="form__messenger_list">
 									<li class="form__messenger_item">
 										<a target="_blank" href="#">WhatsApp</a>
@@ -431,8 +432,8 @@
 										<a target="_blank" href="#">SMS сообщение</a>
 									</li>
 								</ul>
-								<label for="form__messenger-example" class="overlay-close"></label>
 							</label>
+							<label for="form__messenger-example" class="overlay-close"></label>
 							<button type="submit" class="form__messenger-send">Отправить</button>
 						</form>
 					</div>
@@ -482,7 +483,7 @@
 			<form action="#">
 				<label class="form_phone">Телефон или почта</label>
 				<input class="form_input" type="tel" placeholder="Введите телефон">
-				<div class="form__messenger">Выберите удобный способ связи
+				<label class="form__messenger">Выберите удобный способ связи
 					<input type="checkbox" id="form__messenger-example1">
 					<span class="cont">Telegram</span>
 					<ul class="form__messenger_list">
@@ -499,7 +500,7 @@
 							<a target="_blank" href="#">SMS сообщение</a>
 						</li>
 					</ul>
-				</div>
+				</label>
 				<label for="form__messenger-example1" class="overlay-close"></label>
 				<button type="submit" class="form__messenger-send">Отправить</button>
 			</form>

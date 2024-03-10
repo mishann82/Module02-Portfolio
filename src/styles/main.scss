@@ -717,8 +717,7 @@ body {
 		}
 		@media (max-width: $r_mob_500) {
 			font-size: 3.4rem;
-			margin-top: -7.5rem;
-			margin-bottom: 8rem;
+			margin-bottom: 7rem;
 		}
 		@media (max-width: $r_mob_400) {
 			font-size: 2.8rem;
@@ -819,7 +818,7 @@ body {
 		list-style-type: none;
 		font-weight: 400;
 		line-height: 220%;
-		margin-left: -4rem;
+		padding-left: 0;
 		margin-bottom: 3.5rem;
 		opacity: 0.8;
 		@media (max-width: $r_tab_900) {
@@ -1667,7 +1666,7 @@ body {
 			outline: none;
 		}
 	}
-	&__messenger {
+	&__text {
 		display: block;
 		position: relative;
 		color:$grey;
@@ -1676,6 +1675,8 @@ body {
 		line-height: 150%;
 		text-decoration: none;
 		margin-top: 2rem;
+	}
+	&__messenger {
 		input[type="checkbox"]{
 			display:none;
 			&:checked{
@@ -1801,7 +1802,6 @@ body {
 	@media (max-width: $r_tab) {
 		flex-direction: column-reverse;
 		text-align: center;
-		//row-gap: 3rem;
 	}
 	&__nav {
 		@media (max-width: $r_tab) {
@@ -1964,8 +1964,6 @@ body {
 	}	
 	&_nav {
 		display: block;
-		margin-left: -2.7rem;
-		margin-right: -1rem;
 	}
 	&_item {
 		border-bottom: 1px solid rgba(243, 242, 240, 0.2);
