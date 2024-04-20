@@ -415,26 +415,16 @@
 							<label class="form_phone">Телефон или почта</label>
 							<input class="form_input" type="tel" placeholder="Введите телефон">
 							<div class="form__text">Выберите удобный способ связи</div>
-							<label class="form__messenger">
-								<span class="cont">Telegram</span>
-								<input type="checkbox" id="form__messenger-example">
-								<ul class="form__messenger_list">
-									<li class="form__messenger_item">
-										<a target="_blank" href="#">WhatsApp</a>
-									</li>
-									<li class="form__messenger_item">
-										<a target="_blank" href="#">Viber</a>
-									</li>
-									<li class="form__messenger_item">
-										<a target="_blank" href="#">Звонок на телефон</a>
-									</li>
-									<li class="form__messenger_item">
-										<a target="_blank" href="#">SMS сообщение</a>
-									</li>
-								</ul>
-							</label>
-							<label for="form__messenger-example" class="overlay-close"></label>
-							<button type="submit" class="form__messenger-send">Отправить</button>
+							<div class="form__messenger">
+								<button id="formMessengerExample" class="cont">Telegram</button>
+								<div id="formMessengerList" class="form__messenger_list">
+									<a class="form__messenger_item" href="#">WhatsApp</a>
+									<a class="form__messenger_item" href="#">Viber</a>
+									<a class="form__messenger_item" href="#">Звонок на телефон</a>
+									<a class="form__messenger_item" href="#">SMS сообщение</a>
+								</div>
+								<button type="submit" class="form__messenger-send">Отправить</button>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -483,25 +473,16 @@
 			<form action="#">
 				<label class="form_phone">Телефон или почта</label>
 				<input class="form_input" type="tel" placeholder="Введите телефон">
-				<label class="form__messenger">Выберите удобный способ связи
-					<input type="checkbox" id="form__messenger-example1">
-					<span class="cont">Telegram</span>
-					<ul class="form__messenger_list">
-						<li class="form__messenger_item">
-							<a target="_blank" href="#">WhatsApp</a>
-						</li>
-						<li class="form__messenger_item">
-							<a target="_blank" href="#">Viber</a>
-						</li>
-						<li class="form__messenger_item">
-							<a target="_blank" href="#">Звонок на телефон</a>
-						</li>
-						<li class="form__messenger_item">
-							<a target="_blank" href="#">SMS сообщение</a>
-						</li>
-					</ul>
-				</label>
-				<label for="form__messenger-example1" class="overlay-close"></label>
+				<div class="form__text">Выберите удобный способ связи</div>
+				<div class="form__messenger">
+					<button id="formMessengerExamplePopup" class="cont">Telegram</button>
+					<div id="formMessengerListPopup" class="form__messenger_list">
+						<a class="form__messenger_item" href="#">WhatsApp</a>
+						<a class="form__messenger_item" href="#">Viber</a>
+						<a class="form__messenger_item" href="#">Звонок на телефон</a>
+						<a class="form__messenger_item" href="#">SMS сообщение</a>
+					</div>
+				</div>
 				<button type="submit" class="form__messenger-send">Отправить</button>
 			</form>
 			<button class="popup_close" onclick="closePopup()"></button>
@@ -540,6 +521,50 @@
 
 		function closeModal() {
 			document.getElementById("modal").style.top = "-78rem";
+		}
+
+		//Выпадашка
+
+		// Раскрытие списка по клику на dropdown
+
+		var formMessengerExample = document.getElementById("formMessengerExample");
+		var formMessengerList = document.getElementById("formMessengerList");
+
+		formMessengerExample.addEventListener("click", function () {
+			if (formMessengerList.classList.contains("show")) {
+				formMessengerList.classList.remove("show");
+			} else {
+				formMessengerList.classList.add("show");
+			}
+		});
+
+		// Скрыть выпадающее меню, если пользователь щелкает за его пределами
+		window.onclick = function (event) {
+			if (event.target !== formMessengerExample && !formMessengerExample.contains(event.target)) {
+				formMessengerList.classList.remove("show");
+			}
+		}
+
+		//Выпадашка Popap
+
+		// Раскрытие списка по клику на dropdown
+
+		var formMessengerExamplePopup = document.getElementById("formMessengerExamplePopup");
+		var formMessengerListPopup = document.getElementById("formMessengerListPopup");
+
+		formMessengerExamplePopup.addEventListener("click", function () {
+			if (formMessengerListPopup.classList.contains("show")) {
+				formMessengerListPopup.classList.remove("show");
+			} else {
+				formMessengerListPopup.classList.add("show");
+			}
+		});
+
+		// Скрыть выпадающее меню, если пользователь щелкает за его пределами
+		window.onclick = function (event) {
+			if (event.target !== formMessengerExamplePopup && !formMessengerExamplePopup.contains(event.target)) {
+				formMessengerListPopup.classList.remove("show");
+			}
 		}
 	</script>
 </body>
