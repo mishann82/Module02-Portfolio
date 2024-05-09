@@ -416,15 +416,18 @@
 							<input class="form_input" type="tel" placeholder="Введите телефон">
 							<div class="form__text">Выберите удобный способ связи</div>
 							<div class="form__messenger">
-								<button id="formMessengerExample" class="form__messenger-cont">Telegram</button>
+								<button id="formMessengerExample" class="form__messenger-cont">Telegram
+									<img src="images/Arrowst.png" alt="" class="arrowst" id="ArrowSt">
+									<img src="images/Arrowstreverse.png" alt="" class="arrowstrevers" id="ArrowStreverse">
+								</button>
 								<div id="formMessengerList" class="form__messenger_list">
 									<a class="form__messenger_item" href="#">WhatsApp</a>
 									<a class="form__messenger_item" href="#">Viber</a>
 									<a class="form__messenger_item" href="#">Звонок на телефон</a>
 									<a class="form__messenger_item" href="#">SMS сообщение</a>
 								</div>
-								<button type="submit" class="form__messenger-send">Отправить</button>
 							</div>
+							<button type="submit" id="formMessengerSend" class="form__messenger-send">Отправить</button>
 						</form>
 					</div>
 				</div>
@@ -475,7 +478,10 @@
 				<input class="form_input" type="tel" placeholder="Введите телефон">
 				<div class="form__text">Выберите удобный способ связи</div>
 				<div class="form__messenger">
-					<button id="formMessengerExamplePopup" class="form__messenger-cont">Telegram</button>
+					<button id="formMessengerExamplePopup" class="form__messenger-cont">Telegram
+						<img src="images/Arrowst.png" alt="" class="arrowst" id="ArrowStPopup">
+						<img src="images/Arrowstreverse.png" alt="" class="arrowstrevers" id="ArrowStreversePopup">
+					</button>
 					<div id="formMessengerListPopup" class="form__messenger_list">
 						<a class="form__messenger_item" href="#">WhatsApp</a>
 						<a class="form__messenger_item" href="#">Viber</a>
@@ -483,7 +489,7 @@
 						<a class="form__messenger_item" href="#">SMS сообщение</a>
 					</div>
 				</div>
-				<button type="submit" class="form__messenger-send">Отправить</button>
+				<button type="submit" id="formMessengerSendPopup" class="form__messenger-send">Отправить</button>
 			</form>
 			<button class="popup_close" onclick="closePopup()"></button>
 		</div>
@@ -529,6 +535,9 @@
 
 		var formMessengerExample = document.getElementById("formMessengerExample");
 		var formMessengerList = document.getElementById("formMessengerList");
+		var formMessengerSend = document.getElementById("formMessengerSend");
+		var ArrowSt = document.getElementById("ArrowSt");
+		var ArrowStreverse = document.getElementById("ArrowStreverse");
 
 		formMessengerExample.addEventListener("click", function () {
 			if (formMessengerList.classList.contains("show")) {
@@ -536,12 +545,30 @@
 			} else {
 				formMessengerList.classList.add("show");
 			}
+			if (formMessengerSend.classList.contains("hide")) {
+				formMessengerSend.classList.remove("hide")
+			} else {
+				formMessengerSend.classList.add("hide");
+			}
+			if (ArrowSt.classList.contains("hide")) {
+				ArrowSt.classList.remove("hide")
+			} else {
+				ArrowSt.classList.add("hide");
+			}
+			if (ArrowStreverse.classList.contains("show")) {
+				ArrowStreverse.classList.remove("show");
+			} else {
+				ArrowStreverse.classList.add("show");
+			}
 		});
 
 		// Скрыть выпадающее меню, если пользователь щелкает за его пределами
 		window.onclick = function (event) {
 			if (event.target !== formMessengerExample && !formMessengerExample.contains(event.target)) {
-				formMessengerList.classList.remove("show");
+				formMessengerList.classList.remove("show")
+				formMessengerSend.classList.remove("hide")
+				ArrowSt.classList.remove("hide")
+				ArrowStreverse.classList.remove("show");
 			}
 		}
 
@@ -551,6 +578,9 @@
 
 		var formMessengerExamplePopup = document.getElementById("formMessengerExamplePopup");
 		var formMessengerListPopup = document.getElementById("formMessengerListPopup");
+		var formMessengerSendPopup = document.getElementById("formMessengerSendPopup");
+		var ArrowStPopup = document.getElementById("ArrowStPopup");
+		var ArrowStreversePopup = document.getElementById("ArrowStreversePopup");
 
 		formMessengerExamplePopup.addEventListener("click", function () {
 			if (formMessengerListPopup.classList.contains("show")) {
@@ -558,12 +588,30 @@
 			} else {
 				formMessengerListPopup.classList.add("show");
 			}
+			if (formMessengerSendPopup.classList.contains("hide")) {
+				formMessengerSendPopup.classList.remove("hide")
+			} else {
+				formMessengerSendPopup.classList.add("hide");
+			}
+			if (ArrowStPopup.classList.contains("hide")) {
+				ArrowStPopup.classList.remove("hide")
+			} else {
+				ArrowStPopup.classList.add("hide");
+			}
+			if (ArrowStreversePopup.classList.contains("show")) {
+				ArrowStreversePopup.classList.remove("show");
+			} else {
+				ArrowStreversePopup.classList.add("show");
+			}
 		});
 
 		// Скрыть выпадающее меню, если пользователь щелкает за его пределами
 		window.onclick = function (event) {
 			if (event.target !== formMessengerExamplePopup && !formMessengerExamplePopup.contains(event.target)) {
-				formMessengerListPopup.classList.remove("show");
+				formMessengerListPopup.classList.remove("show")
+				formMessengerSendPopup.classList.remove("hide")
+				ArrowSt.classListPopup.remove("hide")
+				ArrowStreverse.classListPopup.remove("show");
 			}
 		}
 	</script>

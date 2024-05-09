@@ -1556,7 +1556,7 @@ body {
 		display: flex;
 		justify-content: space-between;
 		border-bottom: 1px solid $grey;
-		padding-bottom: 13rem;
+		padding-bottom: 16rem;
 		@media (max-width: $r_tab_900) {
 			flex-direction: column-reverse;
 		}
@@ -1688,10 +1688,6 @@ body {
 			border-radius: 0;
 			width: 100%;
 			height: 6.5rem;
-			background-image: url(../images/Arrowst.png);
-			background-repeat: no-repeat;
-			background-position-x: 96%;
-			background-position-y: center;
 			color: $grey;
 			font-size: 1.2rem;
 			font-weight: 400;
@@ -1700,7 +1696,6 @@ body {
 			box-sizing: border-box;
 			transition: all .5s ease;
 			margin-top: 1rem;
-			z-index: 10;
 			&:hover {
 				cursor: pointer;
 				}
@@ -1709,6 +1704,7 @@ body {
 			display: none;
    		background-color: rgba(243, 242, 240, 0.1);
 			border: none;
+			position: absolute;
 			border-radius: 0;
 			width: 100%;
 			color: rgba(243, 242, 240, 0.2);
@@ -1741,7 +1737,7 @@ body {
 			border-radius: 0;
 			width: 100%;
 			height: 6.5rem;
-			margin-top: 4.5rem;
+			margin-top: 5rem;
 			color: $grey;
 			font-size: 1.6rem;
 			font-weight: 700;
@@ -1754,8 +1750,27 @@ body {
 		}
 	}
 }
+.arrowst {
+	display: block;
+	position: absolute;
+	top: 4rem;
+	right: 2.2rem;
+	width: 1.5rem;
+	background-repeat: no-repeat;
+}
+.arrowstrevers {
+	display: none;
+	position: absolute;
+	top: 4rem;
+	right: 2.2rem;
+	width: 1.5rem;
+	background-repeat: no-repeat;
+}
 .show {
    display: block;
+}
+.hide {
+	display: none;
 }
 .footermain {
 	display: block;
