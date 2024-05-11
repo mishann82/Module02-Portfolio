@@ -416,15 +416,15 @@
 							<input class="form_input" type="tel" placeholder="Введите телефон">
 							<div class="form__text">Выберите удобный способ связи</div>
 							<div class="form__messenger">
-								<button id="formMessengerExample" class="form__messenger-cont">Telegram
+								<button id="formMessengerExample" class="form__messenger-cont" onclick="ToggleEvent()">Telegram
 									<img src="images/Arrowst.png" alt="" class="arrowst" id="ArrowSt">
 									<img src="images/Arrowstreverse.png" alt="" class="arrowstrevers" id="ArrowStreverse">
 								</button>
 								<div id="formMessengerList" class="form__messenger_list">
-									<a class="form__messenger_item" href="#">WhatsApp</a>
-									<a class="form__messenger_item" href="#">Viber</a>
-									<a class="form__messenger_item" href="#">Звонок на телефон</a>
-									<a class="form__messenger_item" href="#">SMS сообщение</a>
+									<a href="#" class="form__messenger_item" onclick="handleClick('WhatsApp')">WhatsApp</a>
+									<a href="#" class="form__messenger_item" onclick="handleClick('Viber')">Viber</a>
+									<a href="#" class="form__messenger_item" onclick="handleClick('Phone')">Звонок на телефон</a>
+									<a href="#" class="form__messenger_item" onclick="handleClick('Messages')">SMS сообщение</a>
 								</div>
 							</div>
 							<button type="submit" id="formMessengerSend" class="form__messenger-send">Отправить</button>
@@ -478,15 +478,15 @@
 				<input class="form_input" type="tel" placeholder="Введите телефон">
 				<div class="form__text">Выберите удобный способ связи</div>
 				<div class="form__messenger">
-					<button id="formMessengerExamplePopup" class="form__messenger-cont">Telegram
+					<button id="formMessengerExamplePopup" class="form__messenger-cont" onclick="ToggleEvent()">Telegram
 						<img src="images/Arrowst.png" alt="" class="arrowst" id="ArrowStPopup">
 						<img src="images/Arrowstreverse.png" alt="" class="arrowstrevers" id="ArrowStreversePopup">
 					</button>
 					<div id="formMessengerListPopup" class="form__messenger_list">
-						<a class="form__messenger_item" href="#">WhatsApp</a>
-						<a class="form__messenger_item" href="#">Viber</a>
-						<a class="form__messenger_item" href="#">Звонок на телефон</a>
-						<a class="form__messenger_item" href="#">SMS сообщение</a>
+						<a href="#" class="form__messenger_item" onclick="handleClick('WhatsApp')">WhatsApp</a>
+						<a href="#" class="form__messenger_item" onclick="handleClick('Viber')">Viber</a>
+						<a href="#" class="form__messenger_item" onclick="handleClick('Phone')">Звонок на телефон</a>
+						<a href="#" class="form__messenger_item" onclick="handleClick('Messages')">SMS сообщение</a>
 					</div>
 				</div>
 				<button type="submit" id="formMessengerSendPopup" class="form__messenger-send">Отправить</button>
@@ -531,20 +531,25 @@
 
 		//Выпадашка
 
-		// Раскрытие списка по клику на dropdown
+		function handleClick(value) {
+			document.getElementById('formMessengerExample').innerText = value;
+			ToggleEvent();
+		}
+		function ToggleEvent() {
+			var formMessengerList = document.getElementById('formMessengerList');
+			if (formMessengerList.style.display === "none") {
+				formMessengerList.style.display = "block";
+			} else {
+				formMessengerList.style.display = "none";
+			}
+		}
 
 		var formMessengerExample = document.getElementById("formMessengerExample");
-		var formMessengerList = document.getElementById("formMessengerList");
 		var formMessengerSend = document.getElementById("formMessengerSend");
 		var ArrowSt = document.getElementById("ArrowSt");
 		var ArrowStreverse = document.getElementById("ArrowStreverse");
 
 		formMessengerExample.addEventListener("click", function () {
-			if (formMessengerList.classList.contains("show")) {
-				formMessengerList.classList.remove("show");
-			} else {
-				formMessengerList.classList.add("show");
-			}
 			if (formMessengerSend.classList.contains("hide")) {
 				formMessengerSend.classList.remove("hide")
 			} else {
@@ -565,7 +570,6 @@
 		// Скрыть выпадающее меню, если пользователь щелкает за его пределами
 		window.onclick = function (event) {
 			if (event.target !== formMessengerExample && !formMessengerExample.contains(event.target)) {
-				formMessengerList.classList.remove("show")
 				formMessengerSend.classList.remove("hide")
 				ArrowSt.classList.remove("hide")
 				ArrowStreverse.classList.remove("show");
@@ -574,20 +578,25 @@
 
 		//Выпадашка Popap
 
-		// Раскрытие списка по клику на dropdown
+		function handleClick(value) {
+			document.getElementById('formMessengerExamplePopup').innerText = value;
+			ToggleEvent();
+		}
+		function ToggleEvent() {
+			var formMessengerListPopup = document.getElementById('formMessengerListPopup');
+			if (formMessengerListPopup.style.display === "none") {
+				formMessengerListPopup.style.display = "block";
+			} else {
+				formMessengerListPopup.style.display = "none";
+			}
+		}
 
 		var formMessengerExamplePopup = document.getElementById("formMessengerExamplePopup");
-		var formMessengerListPopup = document.getElementById("formMessengerListPopup");
 		var formMessengerSendPopup = document.getElementById("formMessengerSendPopup");
 		var ArrowStPopup = document.getElementById("ArrowStPopup");
 		var ArrowStreversePopup = document.getElementById("ArrowStreversePopup");
 
 		formMessengerExamplePopup.addEventListener("click", function () {
-			if (formMessengerListPopup.classList.contains("show")) {
-				formMessengerListPopup.classList.remove("show");
-			} else {
-				formMessengerListPopup.classList.add("show");
-			}
 			if (formMessengerSendPopup.classList.contains("hide")) {
 				formMessengerSendPopup.classList.remove("hide")
 			} else {
@@ -608,7 +617,6 @@
 		// Скрыть выпадающее меню, если пользователь щелкает за его пределами
 		window.onclick = function (event) {
 			if (event.target !== formMessengerExamplePopup && !formMessengerExamplePopup.contains(event.target)) {
-				formMessengerListPopup.classList.remove("show")
 				formMessengerSendPopup.classList.remove("hide")
 				ArrowSt.classListPopup.remove("hide")
 				ArrowStreverse.classListPopup.remove("show");

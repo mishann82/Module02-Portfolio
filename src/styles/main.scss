@@ -1711,8 +1711,10 @@ body {
 			line-height: 150%;
 			padding: 0;
 			box-sizing: border-box;
+			z-index: 1;
 			}
 		&_item {
+			display: block;
 			list-style: none;
 			padding-left: 2rem;
 			border: none;
