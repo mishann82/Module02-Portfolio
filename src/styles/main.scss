@@ -779,9 +779,9 @@ body {
 }
 .portfolio__donework {
 	display: flex;
-	padding-top: 8rem;
+	padding-top: 6rem;
 	border-bottom: 1px solid $grey;
-	padding-bottom: 1rem;
+	padding-bottom: 2.5rem;
 	column-gap: 1rem;
 	@media (max-width: $r_mob_700) {
 		display: block;
@@ -1575,12 +1575,11 @@ body {
 			align-self: end;
 			margin-bottom: 0;
 			@media (max-width: $r_tab_900) {
-				margin-top: 8rem;
+				margin-top: 22rem;
 				align-self: center;
 			}
 			@media (max-width: $r_mob_700) {
 				gap: 4rem;
-				margin-top: 6rem;
 			}
 		}
 	}
@@ -1694,7 +1693,6 @@ body {
 			line-height: 150%;
 			padding-right: 85%;
 			box-sizing: border-box;
-			transition: all .5s ease;
 			margin-top: 1rem;
 			&:hover {
 				cursor: pointer;
