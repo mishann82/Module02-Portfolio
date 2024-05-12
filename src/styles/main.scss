@@ -1678,40 +1678,38 @@ body {
 		display: inline-block;
 		border: none;
 		border-radius: 0;
-		width: 100%;
+		min-width: 100%;
 		height: 6.5rem;
 		&-cont{
 			display: block;
 			background-color: rgba(243, 242, 240, 0.1);
 			border: none;
 			border-radius: 0;
-			width: 100%;
+			min-width: 100%;
 			height: 6.5rem;
 			color: $grey;
 			font-size: 1.2rem;
 			font-weight: 400;
 			line-height: 150%;
-			padding-right: 85%;
 			box-sizing: border-box;
 			margin-top: 1rem;
+			padding-left: 2rem;
+			text-align: left;
+			transition: all .5s ease;
 			&:hover {
 				cursor: pointer;
 				}
 			}
-		&_list {
+			&_list {
 			display: none;
    		background-color: rgba(243, 242, 240, 0.1);
 			border: none;
 			position: absolute;
 			border-radius: 0;
 			width: 100%;
-			color: rgba(243, 242, 240, 0.2);
-			font-size: 1.2rem;
-			font-weight: 400;
-			line-height: 150%;
-			padding: 0;
 			box-sizing: border-box;
-			z-index: 1;
+			padding: 0 0.4rem;
+			z-index: 99;
 			}
 		&_item {
 			display: block;
@@ -1724,8 +1722,6 @@ body {
 			font-size: 1.2rem;
 			font-weight: 400;
 			line-height: 250%; 
-			transition: all .5s ease;
-			border-radius: 0;
 				&:last-child {
 					color: $grey;
 					padding-bottom: 1.7rem;

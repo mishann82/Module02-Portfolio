@@ -423,11 +423,13 @@
 								<div id="formMessengerList" class="form__messenger_list">
 									<a href="#" class="form__messenger_item" onclick="handleClick('WhatsApp')">WhatsApp</a>
 									<a href="#" class="form__messenger_item" onclick="handleClick('Viber')">Viber</a>
-									<a href="#" class="form__messenger_item" onclick="handleClick('Phone')">Звонок на телефон</a>
-									<a href="#" class="form__messenger_item" onclick="handleClick('Messages')">SMS сообщение</a>
+									<a href="#" class="form__messenger_item" onclick="handleClick('Звонок на телефон')">Звонок на
+										телефон</a>
+									<a href="#" class="form__messenger_item" onclick="handleClick('SMS сообщение')">SMS
+										сообщение</a>
 								</div>
 							</div>
-							<button type="submit" id="formMessengerSend" class="form__messenger-send">Отправить</button>
+							<button id="formMessengerSend" class="form__messenger-send">Отправить</button>
 						</form>
 					</div>
 				</div>
@@ -485,13 +487,14 @@
 					<div id="formMessengerListPopup" class="form__messenger_list">
 						<a href="#" class="form__messenger_item" onclick="handleClick('WhatsApp')">WhatsApp</a>
 						<a href="#" class="form__messenger_item" onclick="handleClick('Viber')">Viber</a>
-						<a href="#" class="form__messenger_item" onclick="handleClick('Phone')">Звонок на телефон</a>
-						<a href="#" class="form__messenger_item" onclick="handleClick('Messages')">SMS сообщение</a>
+						<a href="#" class="form__messenger_item" onclick="handleClick('Звонок на телефон')">Звонок на
+							телефон</a>
+						<a href="#" class="form__messenger_item" onclick="handleClick('SMS сообщение')">SMS сообщение</a>
 					</div>
 				</div>
-				<button type="submit" id="formMessengerSendPopup" class="form__messenger-send">Отправить</button>
+				<button id="formMessengerSendPopup" class="form__messenger-send">Отправить</button>
+				<button class="popup_close" onclick="closePopup()"></button>
 			</form>
-			<button class="popup_close" onclick="closePopup()"></button>
 		</div>
 	</div>
 	<script>
