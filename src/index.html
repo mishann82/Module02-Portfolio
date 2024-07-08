@@ -416,17 +416,13 @@
 							<input class="form_input" type="tel" placeholder="Введите телефон">
 							<div class="form__text">Выберите удобный способ связи</div>
 							<div class="form__messenger">
-								<button id="formMessengerExample" class="form__messenger-cont" onclick="ToggleEvent()">Telegram
-									<img src="images/Arrowst.png" alt="" class="arrowst" id="ArrowSt">
-									<img src="images/Arrowstreverse.png" alt="" class="arrowstrevers" id="ArrowStreverse">
+								<button id="formMessengerExample" class="form__messenger-cont form__messenger-arrowst">Telegram
 								</button>
 								<div id="formMessengerList" class="form__messenger_list">
-									<a href="#" class="form__messenger_item" onclick="handleClick('WhatsApp')">WhatsApp</a>
-									<a href="#" class="form__messenger_item" onclick="handleClick('Viber')">Viber</a>
-									<a href="#" class="form__messenger_item" onclick="handleClick('Звонок на телефон')">Звонок на
-										телефон</a>
-									<a href="#" class="form__messenger_item" onclick="handleClick('SMS сообщение')">SMS
-										сообщение</a>
+									<a href="#" class="form__messenger_item" >WhatsApp</a>
+									<a href="#" class="form__messenger_item" >Viber</a>
+									<a href="#" class="form__messenger_item" >Звонок на телефон</a>
+									<a href="#" class="form__messenger_item" >SMS сообщение</a>
 								</div>
 							</div>
 							<button id="formMessengerSend" class="form__messenger-send">Отправить</button>
@@ -480,16 +476,13 @@
 				<input class="form_input" type="tel" placeholder="Введите телефон">
 				<div class="form__text">Выберите удобный способ связи</div>
 				<div class="form__messenger">
-					<button id="formMessengerExamplePopup" class="form__messenger-cont" onclick="ToggleEvent()">Telegram
-						<img src="images/Arrowst.png" alt="" class="arrowst" id="ArrowStPopup">
-						<img src="images/Arrowstreverse.png" alt="" class="arrowstrevers" id="ArrowStreversePopup">
+					<button id="formMessengerExamplePopup" class="form__messenger-cont form__messenger-arrowst">Telegram
 					</button>
 					<div id="formMessengerListPopup" class="form__messenger_list">
-						<a href="#" class="form__messenger_item" onclick="handleClick('WhatsApp')">WhatsApp</a>
-						<a href="#" class="form__messenger_item" onclick="handleClick('Viber')">Viber</a>
-						<a href="#" class="form__messenger_item" onclick="handleClick('Звонок на телефон')">Звонок на
-							телефон</a>
-						<a href="#" class="form__messenger_item" onclick="handleClick('SMS сообщение')">SMS сообщение</a>
+						<a href="#" class="form__messenger_item">WhatsApp</a>
+						<a href="#" class="form__messenger_item">Viber</a>
+						<a href="#" class="form__messenger_item">Звонок на телефон</a>
+						<a href="#" class="form__messenger_item">SMS сообщение</a>
 					</div>
 				</div>
 				<button id="formMessengerSendPopup" class="form__messenger-send">Отправить</button>
@@ -534,97 +527,89 @@
 
 		//Выпадашка
 
-		function handleClick(value) {
-			document.getElementById('formMessengerExample').innerText = value;
-			ToggleEvent();
-		}
-		function ToggleEvent() {
-			var formMessengerList = document.getElementById('formMessengerList');
-			if (formMessengerList.style.display === "none") {
-				formMessengerList.style.display = "block";
-			} else {
-				formMessengerList.style.display = "none";
-			}
-		}
+		const formMessengerExample = document.getElementById('formMessengerExample');
+		const formMessengerList = document.getElementById('formMessengerList');
+		const dropdownLinks = formMessengerList.querySelectorAll('a');
+		
+		formMessengerExample.addEventListener('click', function() {
+   if (formMessengerList.style.display === 'block') {
+      formMessengerList.style.display = 'none';
+      formMessengerExample.classList.remove('rotate-180');
+   } else {
+      formMessengerList.style.display = 'block';
+      formMessengerExample.classList.add('rotate-180');
+   }
+});
 
-		var formMessengerExample = document.getElementById("formMessengerExample");
-		var formMessengerSend = document.getElementById("formMessengerSend");
-		var ArrowSt = document.getElementById("ArrowSt");
-		var ArrowStreverse = document.getElementById("ArrowStreverse");
+dropdownLinks.forEach(link => {
+   link.addEventListener('click', function(event) {
+      event.preventDefault();
+      formMessengerExample.textContent = this.dataset.value;
+      formMessengerList.style.display = 'none';
+      formMessengerExample.classList.remove('rotate-180');
+   });
+});
 
-		formMessengerExample.addEventListener("click", function () {
+window.addEventListener('click', function(event) {
+   if (!event.target.matches('.form__messenger-cont')) {
+      if (formMessengerList.style.display === 'block') {
+         formMessengerList.style.display = 'none';
+         formMessengerExample.classList.remove('rotate-180');
+      }
+   }
+});
+
+var formMessengerSend = document.getElementById("formMessengerSend");
+formMessengerExample.addEventListener("click", function () {
 			if (formMessengerSend.classList.contains("hide")) {
 				formMessengerSend.classList.remove("hide")
 			} else {
 				formMessengerSend.classList.add("hide");
 			}
-			if (ArrowSt.classList.contains("hide")) {
-				ArrowSt.classList.remove("hide")
-			} else {
-				ArrowSt.classList.add("hide");
-			}
-			if (ArrowStreverse.classList.contains("show")) {
-				ArrowStreverse.classList.remove("show");
-			} else {
-				ArrowStreverse.classList.add("show");
-			}
 		});
-
-		// Скрыть выпадающее меню, если пользователь щелкает за его пределами
-		window.onclick = function (event) {
-			if (event.target !== formMessengerExample && !formMessengerExample.contains(event.target)) {
-				formMessengerSend.classList.remove("hide")
-				ArrowSt.classList.remove("hide")
-				ArrowStreverse.classList.remove("show");
-			}
-		}
 
 		//Выпадашка Popap
 
-		function handleClick(value) {
-			document.getElementById('formMessengerExamplePopup').innerText = value;
-			ToggleEvent();
-		}
-		function ToggleEvent() {
-			var formMessengerListPopup = document.getElementById('formMessengerListPopup');
-			if (formMessengerListPopup.style.display === "none") {
-				formMessengerListPopup.style.display = "block";
-			} else {
-				formMessengerListPopup.style.display = "none";
-			}
-		}
+		const formMessengerExamplePopup = document.getElementById('formMessengerExamplePopup');
+		const formMessengerListPopup = document.getElementById('formMessengerListPopup');
+		const dropdownLinksPopup = formMessengerListPopup.querySelectorAll('a');
+		
+		formMessengerExamplePopup.addEventListener('click', function() {
+   if (formMessengerListPopup.style.display === 'block') {
+      formMessengerListPopup.style.display = 'none';
+      formMessengerExamplePopup.classList.remove('rotate-180');
+   } else {
+      formMessengerListPopup.style.display = 'block';
+      formMessengerExamplePopup.classList.add('rotate-180');
+   }
+});
 
-		var formMessengerExamplePopup = document.getElementById("formMessengerExamplePopup");
-		var formMessengerSendPopup = document.getElementById("formMessengerSendPopup");
-		var ArrowStPopup = document.getElementById("ArrowStPopup");
-		var ArrowStreversePopup = document.getElementById("ArrowStreversePopup");
+dropdownLinksPopup.forEach(link => {
+   link.addEventListener('click', function(event) {
+      event.preventDefault();
+      formMessengerExamplePopup.textContent = this.dataset.value;
+      formMessengerListPopup.style.display = 'none';
+      formMessengerExamplePopup.classList.remove('rotate-180');
+   });
+});
 
-		formMessengerExamplePopup.addEventListener("click", function () {
+window.addEventListener('click', function(event) {
+   if (!event.target.matches('.form__messenger-cont')) {
+      if (formMessengerListPopup.style.display === 'block') {
+         formMessengerListPopup.style.display = 'none';
+         formMessengerExamplePopup.classList.remove('rotate-180');
+      }
+   }
+});
+
+var formMessengerSendPopup = document.getElementById("formMessengerSendPopup");
+formMessengerExamplePopup.addEventListener("click", function () {
 			if (formMessengerSendPopup.classList.contains("hide")) {
 				formMessengerSendPopup.classList.remove("hide")
 			} else {
 				formMessengerSendPopup.classList.add("hide");
 			}
-			if (ArrowStPopup.classList.contains("hide")) {
-				ArrowStPopup.classList.remove("hide")
-			} else {
-				ArrowStPopup.classList.add("hide");
-			}
-			if (ArrowStreversePopup.classList.contains("show")) {
-				ArrowStreversePopup.classList.remove("show");
-			} else {
-				ArrowStreversePopup.classList.add("show");
-			}
 		});
-
-		// Скрыть выпадающее меню, если пользователь щелкает за его пределами
-		window.onclick = function (event) {
-			if (event.target !== formMessengerExamplePopup && !formMessengerExamplePopup.contains(event.target)) {
-				formMessengerSendPopup.classList.remove("hide")
-				ArrowSt.classListPopup.remove("hide")
-				ArrowStreverse.classListPopup.remove("show");
-			}
-		}
 	</script>
 </body>
 
