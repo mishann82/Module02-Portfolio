@@ -1680,16 +1680,6 @@ body {
 		border-radius: 0;
 		min-width: 100%;
 		height: 6.5rem;
-	&-arrowst {
-		display: block;
-		background-image: url(../images/Arrowst.png);
-		background-repeat: no-repeat;
-		background-position: 96% 3rem;
-		transition: transform 0.2s;
-		&::after {
-			transform: rotate(180deg);
-		 }
-	}	
 		&-cont{
 			display: block;
 			background-color: rgba(243, 242, 240, 0.1);
@@ -1705,9 +1695,22 @@ body {
 			margin-top: 1rem;
 			padding-left: 2rem;
 			text-align: left;
+			position: relative;
 			&:hover {
 				cursor: pointer;
 				}
+			&:after {
+					contain: '';
+					background-image: url(../images/Arrowst.png);
+					background-repeat: no-repeat;
+					background-size: contain;
+					width: 1.6rem;
+					height: 1.6rem;
+					position: absolute;
+					top: 1rem;
+					right: 2rem;
+					transition: transform 0.2s;
+				}	
 	}	
 				&_list {
 			display: none;
@@ -1719,7 +1722,6 @@ body {
 			box-sizing: border-box;
 			padding: 0 0.4rem;
 			transition: all .5s ease;
-			z-index: 99;
 			}
 		&_item {
 			display: block;
@@ -1755,6 +1757,9 @@ body {
 			}
 		}
 	}
+}
+.rotate-180:after {
+	transform: rotate(180deg);
 }
 .show {
    display: block;
