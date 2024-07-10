@@ -419,10 +419,10 @@
 								<button id="formMessengerExample" class="form__messenger-cont">Telegram
 								</button>
 								<div id="formMessengerList" class="form__messenger_list">
-									<a href="#" class="form__messenger_item" >WhatsApp</a>
-									<a href="#" class="form__messenger_item" >Viber</a>
-									<a href="#" class="form__messenger_item" >Звонок на телефон</a>
-									<a href="#" class="form__messenger_item" >SMS сообщение</a>
+									<a href="#" class="form__messenger_item">WhatsApp</a>
+									<a href="#" class="form__messenger_item">Viber</a>
+									<a href="#" class="form__messenger_item">Звонок на телефон</a>
+									<a href="#" class="form__messenger_item">SMS сообщение</a>
 								</div>
 							</div>
 							<button id="formMessengerSend" class="form__messenger-send">Отправить</button>
@@ -530,37 +530,37 @@
 		const formMessengerExample = document.getElementById('formMessengerExample');
 		const formMessengerList = document.getElementById('formMessengerList');
 		const dropdownLinks = formMessengerList.querySelectorAll('a');
-		
-		formMessengerExample.addEventListener('click', function() {
-   if (formMessengerList.style.display === 'block') {
-      formMessengerList.style.display = 'none';
-      formMessengerExample.classList.remove('rotate-180');
-   } else {
-      formMessengerList.style.display = 'block';
-      formMessengerExample.classList.add('rotate-180');
-   }
-});
 
-dropdownLinks.forEach(link => {
-   link.addEventListener('click', function(event) {
-      event.preventDefault();
-      formMessengerExample.textContent = this.dataset.value;
-      formMessengerList.style.display = 'none';
-      formMessengerExample.classList.remove('rotate-180');
-   });
-});
+		formMessengerExample.addEventListener('click', function () {
+			if (formMessengerList.style.display === 'block') {
+				formMessengerList.style.display = 'none';
+				formMessengerExample.classList.remove('rotate-180');
+			} else {
+				formMessengerList.style.display = 'block';
+				formMessengerExample.classList.add('rotate-180');
+			}
+		});
 
-window.addEventListener('click', function(event) {
-   if (!event.target.matches('.form__messenger-cont')) {
-      if (formMessengerList.style.display === 'block') {
-         formMessengerList.style.display = 'none';
-         formMessengerExample.classList.remove('rotate-180');
-      }
-   }
-});
+		dropdownLinks.forEach(link => {
+			link.addEventListener('click', function (event) {
+				event.preventDefault();
+				formMessengerExample.textContent = this.dataset.value;
+				formMessengerList.style.display = 'none';
+				formMessengerExample.classList.remove('rotate-180');
+			});
+		});
 
-var formMessengerSend = document.getElementById("formMessengerSend");
-formMessengerExample.addEventListener("click", function () {
+		window.addEventListener('click', function (event) {
+			if (!event.target.matches('.form__messenger-cont')) {
+				if (formMessengerList.style.display === 'block') {
+					formMessengerList.style.display = 'none';
+					formMessengerExample.classList.remove('rotate-180');
+				}
+			}
+		});
+
+		var formMessengerSend = document.getElementById("formMessengerSend");
+		formMessengerExample.addEventListener("click", function () {
 			if (formMessengerSend.classList.contains("hide")) {
 				formMessengerSend.classList.remove("hide")
 			} else {
@@ -573,43 +573,44 @@ formMessengerExample.addEventListener("click", function () {
 		const formMessengerExamplePopup = document.getElementById('formMessengerExamplePopup');
 		const formMessengerListPopup = document.getElementById('formMessengerListPopup');
 		const dropdownLinksPopup = formMessengerListPopup.querySelectorAll('a');
-		
-		formMessengerExamplePopup.addEventListener('click', function() {
-   if (formMessengerListPopup.style.display === 'block') {
-      formMessengerListPopup.style.display = 'none';
-      formMessengerExamplePopup.classList.remove('rotate-180');
-   } else {
-      formMessengerListPopup.style.display = 'block';
-      formMessengerExamplePopup.classList.add('rotate-180');
-   }
-});
 
-dropdownLinksPopup.forEach(link => {
-   link.addEventListener('click', function(event) {
-      event.preventDefault();
-      formMessengerExamplePopup.textContent = this.dataset.value;
-      formMessengerListPopup.style.display = 'none';
-      formMessengerExamplePopup.classList.remove('rotate-180');
-   });
-});
+		formMessengerExamplePopup.addEventListener('click', function () {
+			if (formMessengerListPopup.style.display === 'block') {
+				formMessengerListPopup.style.display = 'none';
+				formMessengerExamplePopup.classList.remove('rotate-180');
+			} else {
+				formMessengerListPopup.style.display = 'block';
+				formMessengerExamplePopup.classList.add('rotate-180');
+			}
+		});
 
-window.addEventListener('click', function(event) {
-   if (!event.target.matches('.form__messenger-cont')) {
-      if (formMessengerListPopup.style.display === 'block') {
-         formMessengerListPopup.style.display = 'none';
-         formMessengerExamplePopup.classList.remove('rotate-180');
-      }
-   }
-});
+		dropdownLinksPopup.forEach(link => {
+			link.addEventListener('click', function (event) {
+				event.preventDefault();
+				formMessengerExamplePopup.textContent = this.dataset.value;
+				formMessengerListPopup.style.display = 'none';
+				formMessengerExamplePopup.classList.remove('rotate-180');
+			});
+		});
 
-var formMessengerSendPopup = document.getElementById("formMessengerSendPopup");
-formMessengerExamplePopup.addEventListener("click", function () {
+		window.addEventListener('click', function (event) {
+			if (!event.target.matches('.form__messenger-cont')) {
+				if (formMessengerListPopup.style.display === 'block') {
+					formMessengerListPopup.style.display = 'none';
+					formMessengerExamplePopup.classList.remove('rotate-180');
+				}
+			}
+		});
+
+		var formMessengerSendPopup = document.getElementById("formMessengerSendPopup");
+		formMessengerExamplePopup.addEventListener("click", function () {
 			if (formMessengerSendPopup.classList.contains("hide")) {
 				formMessengerSendPopup.classList.remove("hide")
 			} else {
 				formMessengerSendPopup.classList.add("hide");
 			}
 		});
+
 	</script>
 </body>
 
