@@ -1560,8 +1560,8 @@ body {
 		@media (max-width: $r_tab_900) {
 			flex-direction: column-reverse;
 		}
-		@media (max-width: $r_mob_500) {
-			padding-bottom: 6rem;
+		@media (max-width: $r_mob_700) {
+			padding-bottom: 7rem;
 		}
 		&_social {
 			display: flex;
@@ -1575,11 +1575,12 @@ body {
 			align-self: end;
 			margin-bottom: 0;
 			@media (max-width: $r_tab_900) {
-				margin-top: 22rem;
+				margin-top: 10rem;
 				align-self: center;
 			}
 			@media (max-width: $r_mob_700) {
 				gap: 4rem;
+				margin-top: 7rem;
 			}
 		}
 	}
@@ -1770,7 +1771,6 @@ body {
 }
 .footermain {
 	display: block;
-	margin-top: 2rem;
 	padding-bottom: 4.2rem;
 }
 .footer {	
