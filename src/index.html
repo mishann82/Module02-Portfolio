@@ -491,107 +491,25 @@
 		</div>
 	</div>
 	<script>
-		function openPopup() {
-			document.getElementById("popupForm").style.visibility = "visible";
-		}
 
-		function closePopup() {
-			document.getElementById("popupForm").style.visibility = "hidden";
-		}
+	function openPopup() {
+	document.getElementById("popupForm").style.visibility = "visible";
+}
 
-		// Smooth Scroll
+function closePopup() {
+	document.getElementById("popupForm").style.visibility = "hidden";
+}
 
-		const links = document.querySelectorAll(".header__link, .footer__link");
+// Menu
 
-		for (const link of links) {
-			link.addEventListener("click", clickHandler);
-		}
+function openModal() {
+	document.getElementById("modal").style.top = "7rem";
+}
 
-		function clickHandler(e) {
-			e.preventDefault();
-			const href = this.getAttribute("href");
+function closeModal() {
+	document.getElementById("modal").style.top = "-78rem";
+}
 
-			document.querySelector(href).scrollIntoView({
-				behavior: "smooth"
-			});
-		}
-		// Menu
-
-		function openModal() {
-			document.getElementById("modal").style.top = "7rem";
-		}
-
-		function closeModal() {
-			document.getElementById("modal").style.top = "-78rem";
-		}
-
-		//Выпадашка
-
-		const formMessengerExample = document.getElementById('formMessengerExample');
-		const formMessengerList = document.getElementById('formMessengerList');
-		const dropdownLinks = formMessengerList.querySelectorAll('a');
-
-		formMessengerExample.addEventListener('click', function () {
-			if (formMessengerList.style.display === 'block') {
-				formMessengerList.style.display = 'none';
-				formMessengerExample.classList.remove('rotate-180');
-			} else {
-				formMessengerList.style.display = 'block';
-				formMessengerExample.classList.add('rotate-180');
-			}
-		});
-
-		dropdownLinks.forEach(link => {
-			link.addEventListener('click', function (event) {
-				event.preventDefault();
-				formMessengerExample.textContent = this.dataset.value;
-				formMessengerList.style.display = 'none';
-				formMessengerExample.classList.remove('rotate-180');
-			});
-		});
-
-		window.addEventListener('click', function (event) {
-			if (!event.target.matches('.form__messenger-cont')) {
-				if (formMessengerList.style.display === 'block') {
-					formMessengerList.style.display = 'none';
-					formMessengerExample.classList.remove('rotate-180');
-				}
-			}
-		});
-
-		//Выпадашка Popap
-
-		const formMessengerExamplePopup = document.getElementById('formMessengerExamplePopup');
-		const formMessengerListPopup = document.getElementById('formMessengerListPopup');
-		const dropdownLinksPopup = formMessengerListPopup.querySelectorAll('a');
-
-		formMessengerExamplePopup.addEventListener('click', function () {
-			if (formMessengerListPopup.style.display === 'block') {
-				formMessengerListPopup.style.display = 'none';
-				formMessengerExamplePopup.classList.remove('rotate-180');
-			} else {
-				formMessengerListPopup.style.display = 'block';
-				formMessengerExamplePopup.classList.add('rotate-180');
-			}
-		});
-
-		dropdownLinksPopup.forEach(link => {
-			link.addEventListener('click', function (event) {
-				event.preventDefault();
-				formMessengerExamplePopup.textContent = this.dataset.value;
-				formMessengerListPopup.style.display = 'none';
-				formMessengerExamplePopup.classList.remove('rotate-180');
-			});
-		});
-
-		window.addEventListener('click', function (event) {
-			if (!event.target.matches('.form__messenger-cont')) {
-				if (formMessengerListPopup.style.display === 'block') {
-					formMessengerListPopup.style.display = 'none';
-					formMessengerExamplePopup.classList.remove('rotate-180');
-				}
-			}
-		});
 	</script>
 </body>
 
