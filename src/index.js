@@ -45,6 +45,7 @@ dropdownLinks.forEach(link => {
 });
 
 window.addEventListener('click', function (event) {
+	event.preventDefault()
 	if (!event.target.matches('.form__messenger-cont')) {
 		if (formMessengerList.style.display === 'block') {
 			formMessengerList.style.display = 'none';
@@ -79,6 +80,7 @@ dropdownLinksPopup.forEach(link => {
 });
 
 window.addEventListener('click', function (event) {
+	event.preventDefault()
 	if (!event.target.matches('.form__messenger-cont')) {
 		if (formMessengerListPopup.style.display === 'block') {
 			formMessengerListPopup.style.display = 'none';
